@@ -1,0 +1,275 @@
+* {
+  text-transform: none;
+  color: #e5e5e5;
+}
+
+.heading {
+  padding: 4rem;
+  color: #e5e5e5;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: visible;
+}
+
+/* ----------------------------------------------------------denne menu style starts - napojony listok ---------------------------------------------------------------- */
+
+.denne-menu {
+  background: url(images/pivo.jpg);
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* background-position: right; */
+  background-position: top;
+  object-fit: contain;
+  background-size: 90%;
+}
+
+.denne-menu .menu-container {
+  padding: 3rem 45rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr 1fr));
+  gap: 5rem 10rem;
+  text-align: left;
+}
+
+.denne-menu .menu-container .item .item-name {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+  margin-top: 0.5rem;
+  justify-content: center;
+  animation: content-fade 4s;
+}
+
+.denne-menu .menu-container .item .item-menu {
+  padding: 5rem 0;
+  animation: content-fade 4s;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: var(--light-color);
+  /* bottom: 75%; */
+  top: 15rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: animate 4s linear infinite;
+}
+
+.denne-menu .menu-container .item .item-name h2 {
+  padding-top: 5rem;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.denne-menu .menu-container .item .item-name h5 {
+  position: absolute;
+  padding-top: 9rem;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.denne-menu .menu-container .item .item-name h2:hover {
+  transform: scale(1.2);
+}
+
+.denne-menu .menu-container .item .item-name img {
+  position: absolute;
+  text-align: center;
+}
+
+.denne-menu .menu-container .item .item-menu h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  /* display: inline-block; */
+  float: right;
+}
+
+.denne-menu .menu-container .item .item-menu h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  display: contents;
+  text-align: center;
+}
+
+.denne-menu .menu-container .item .item-menu p {
+  font-size: 1.5rem;
+}
+
+.denne-menu .menu-container .item .item-menu span {
+  padding: 0 5%;
+  font-size: 1.5rem;
+}
+
+/* .denne-menu .menu-container .item .item-menu p {
+
+} */
+
+.denne-menu .menu-container .item .item-menu ul {
+  /* display: flex; */
+  font-size: 1.5rem;
+  list-style: none;
+  padding: 0.8rem 0;
+  font-weight: 400;
+}
+
+.denne-menu .menu-container .item .item-menu ul li a {
+  color: #b9b9b9;
+}
+/* --------------------------------------------------------------denne menu style ends - napojovy listok  ------------------------------------------------------------------------------------------------ */
+
+/* -----------------------------------------------------------keyframes for animation---------------------------------------------------------- */
+
+@keyframes animate {
+  0% {
+    width: 100px;
+  }
+
+  50% {
+    width: 200px;
+  }
+
+  100% {
+    width: 100px;
+  }
+}
+
+@keyframes content-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+/* ---------------------------------------------------------------media query------------------------------------------------------------------ */
+
+@media (max-width: 1550px) {
+
+
+
+.denne-menu .menu-container { 
+  padding: 3rem 35rem;  
+}
+
+html {
+   font-size: 60%;
+}
+
+}
+
+@media (max-width: 1340px) {
+  /*-------------- navbar media query for denne menu---------------------- */
+  html {
+    font-size: 70%;
+  }
+
+.heading {
+  padding-top: 2rem;
+}
+
+  .header {
+    padding: 2rem;
+  }
+
+  .header.active {
+    padding: 2rem;
+  }
+
+  header .logo img {
+    height: 7rem;
+  }
+  header .icons #menu {
+    display: inline-block;
+  }
+
+  header .icons #btn {
+    display: none;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    /* text-align: center; ---> this is taken out for now as we wanted to have text allign to the left in the drop down hamburger menu under 768px small display */
+    border-top: 0.1rem solid rgba(205, 170, 124, 0.2);
+    border-bottom: 0.1rem solid rgba(205, 170, 124, 0.2);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  header .navbar a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background: var(--black);
+  }
+
+  .denne-menu .menu-container { 
+  padding: 3rem 15rem;  
+  }
+
+  h1::before {
+    top: 13rem;
+  }
+}
+/* --------------------------------------------------------max width 996px--------------------------------------------- */
+@media (max-width: 966px) {
+  .denne-menu .menu-container { 
+  padding: 3rem 5rem;  
+  }
+
+  /* --------------------------------------------------------max width 550px--------------------------------------------- */
+@media (max-width: 700px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading {
+    padding-top: 12rem;
+  }
+  
+  h1::before {
+    top: 23rem;
+  }
+  
+}
+/* -----------------------------------------------------max width 346px ------------------------------------------------- */
+
+@media (max-width: 346px) {
+  html {
+    font-size: 35%;
+  }
+
+  .header .icons a {
+    letter-spacing: none;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .heading {
+    padding-top: 16rem;
+  }
+}

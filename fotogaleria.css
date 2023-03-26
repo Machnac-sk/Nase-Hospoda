@@ -1,0 +1,196 @@
+header {
+  background-image: url(images/our-menu-bg.jpg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+}
+
+.heading {
+  margin-top: 130px;
+}
+
+.sub-heading {
+  margin-top: 30px;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: var(--light-color);
+  /* bottom: 75%; */
+  top: 20rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: animate 4s linear infinite;
+}
+
+/*change navbar style on scroll using javascript */
+.header-scroll {
+  background: var(--black);
+}
+
+.gallery {
+  min-height: 100vh;
+  padding-bottom: 100px;
+  background-image: url(images/fotogaleria-background.jpg);
+  /* background: var(--black); */
+  animation: content-fade 3s;
+}
+
+.gallery .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 50px;
+  padding: 20px 0;
+  list-style: none;
+}
+
+.gallery .controls .buttons {
+  height: 40px;
+  width: 160px;
+  color: var(--light-color);
+  font-size: 20px;
+  line-height: 40px;
+  cursor: pointer;
+  margin: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.65);
+  text-align: center;
+  display: inline-table;
+}
+
+.gallery .controls .buttons.active {
+  color: #fff;
+  border: 0.2rem solid rgba(205, 170, 124, 0.2);
+}
+
+.gallery .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery .image-container .image {
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+  border: 8px double white;
+  margin: 20px;
+}
+
+.gallery .image-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery .image-container .image:hover img {
+  transform: scale(1.2);
+}
+
+/* -------------------------keyframes for animation----------------------------------- */
+
+@keyframes animate {
+  0% {
+    width: 100px;
+  }
+
+  50% {
+    width: 200px;
+  }
+
+  100% {
+    width: 100px;
+  }
+}
+
+@keyframes content-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*---------------------------------------------------------------------------media query 1330px--------------------------------------------------------------------*/
+
+@media (max-width: 1330px) {
+  /*-------------- navbar media query----------------------- */
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+
+  .header.active {
+    padding: 2rem;
+  }
+
+  header .logo img {
+    height: 7rem;
+  }
+  header .icons #menu {
+    display: inline-block;
+  }
+
+  header .icons #btn {
+    display: none;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    /* text-align: center; ---> this is taken out for now as we wanted to have text allign to the left in the drop down hamburger menu under 768px small display */
+    border-top: 0.1rem solid rgba(205, 170, 124, 0.2);
+    border-bottom: 0.1rem solid rgba(205, 170, 124, 0.2);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  header .navbar a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background: var(--black);
+  }
+
+/*---------------------------------------------------------------------------media query 550px--------------------------------------------------------------------*/
+  @media (max-width: 550px) {
+      html {
+    font-size: 40%;
+  }
+  .heading {
+  margin-top: 140px;
+}
+
+h1::before {
+  top: 28rem;
+}
+}
+
+/*---------------------------------------------------------------------------media query 350px--------------------------------------------------------------------*/
+@media (max-width: 350px) {
+  .heading {
+    margin-top: 110px;
+  }
+}

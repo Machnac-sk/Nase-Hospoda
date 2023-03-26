@@ -1,0 +1,753 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+:root {
+  --black: #333;
+  --light-color: #cdaa7c;
+  --box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  /* text-transform: capitalize; */
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+/* -------------------------------------------------------------------customer scrollbar start-------------------------------------- */
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--light-color);
+  border-radius: 5rem;
+}
+/* --------------------------------------------------------------------customer scrollbar end-------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------navbar style start----------------------------------------------------------------------- */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 1rem 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  z-index: 10000;
+  animation: nav-load 400ms ease-out;
+}
+/*change navbar style on scroll using javascript */
+.header-scroll {
+  background: var(--black);
+}
+
+header .logo img {
+  height: auto;
+}
+
+header .navbar a {
+  font-size: 1.7rem;
+  padding: 0.5rem 1.5rem;
+  color: var(--light-color);
+  border: 0.6rem solid transparent;
+  text-transform: none;
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+  color: #fff;
+  border: 0.1rem solid rgba(205, 170, 124, 0.2);
+  border-radius: 5px 5px 5px 5px;
+}
+
+header .icons i {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  background-color: var(--light-color);
+  text-align: center;
+  font-size: 1.7rem;
+  color: #fff;
+  border-radius: 5px 5px 5px 5px;
+}
+
+header .icons i:hover {
+  color: #fff;
+  background-color: var(--light-color);
+  transform: scale(110%);
+}
+
+header .icons #menu {
+  display: none;
+}
+
+/*--------------------------------------------------------------------navbar style end----------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------slider style start -------------------------------------------------------------------------- */
+
+.home .home-slider .slide {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: flex-start;
+}
+
+.home .home-slider .slider1 {
+  background-image: url(images/bannery/bannery_web-1.jpg);
+}
+
+.home .home-slider .slider2 {
+  background-image: url(images/bannery/bannery_web-2.jpg);
+}
+
+.home .home-slider .slider3 {
+  background-image: url(images/bannery/bannery_web-3.jpg);
+}
+
+.home .home-slider .slider4 {
+  background-image: url(images/bannery/bannery_web-4.jpg);
+}
+
+.home .home-slider .slider5 {
+  background-image: url(images/bannery/bannery_web-5.jpg);
+}
+
+/* this section is for the background style images with cover style and without any repeats for the images being used */
+.home .home-slider .slider1,
+.home .home-slider .slider2,
+.home .home-slider .slider3,
+.home .home-slider .slider4,
+.home .home-slider .slider5 {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.btn {
+  position: relative;
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: #fff;
+  border: 0.1rem solid rgba(205, 170, 124, 0.2);
+  background: transparent;
+  cursor: pointer;
+  padding: 0.8rem 3rem;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.btn::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--light-color);
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 0.5s;
+}
+
+.btn:hover.btn::before {
+  left: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--light-color) !important;
+  width: 15px;
+  height: 15px;
+  border-radius: 0;
+}
+/* --------------------------------------------------------------slider style end ------------------------------------------------------------------------------------------------ */
+
+/* --------------------------------------------------------------aktualne-informacie style start ------------------------------------------------------------------------------------------------ */
+
+.aktualne-informacie {
+  /* display: none; */
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-color);
+  text-align: center;
+
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+
+.aktualne-informacie .aktualne-informacie-content {
+  padding: 45px 16px 16px 16px;
+  max-width: 500rem;
+}
+
+.aktualne-informacie .aktualne-informacie-content .aktualne-informacie-text {
+  flex-grow: 1;
+  line-height: 1.4;
+  font-size: 1.5rem;
+}
+
+.aktualne-informacie-button {
+  cursor: pointer;
+  margin-left: 0.5rem 0.5rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  background-color: var(--light-color);
+  text-align: center;
+  color: #fff;
+}
+
+.ponuka-prace {
+  position: absolute;
+  background: var(--light-color);
+  margin-left: 70rem;
+}
+
+.ponuka-prace::before {
+  background: var(--black);
+}
+
+/* --------------------------------------------------------------aktualne-informacie style end ------------------------------------------------------------------------------------------------ */
+
+/* --------------------------------------------------------------WELCOME style starts ------------------------------------------------------------------------------------------------ */
+section {
+  padding: 5rem 9%;
+}
+
+.heading {
+  text-align: center;
+  color: var(--black);
+  font-size: 4.5rem;
+  padding-bottom: 2rem;
+  /* text-transform: uppercase; */
+  letter-spacing: 1.3px;
+}
+
+.sub-heading {
+  text-align: center;
+  color: var(--light-color);
+  font-size: 2.5rem;
+  padding: 0.5rem 2rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+  background-color: var(--black);
+  display: inline-block;
+  /* toto je shadow 3D effect for sub-headings for whole page - very cool */
+  border-radius: 5px 5px 5px 5px;
+  /* overflow: hidden; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+
+.welcome .box-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.welcome .box-container .box {
+  width: 33%;
+  background-color: var(--black);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  padding-bottom: 1%;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.welcome .box-container .box .image {
+  height: 25rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.welcome .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.welcome .box-container .box .image:hover img {
+  transform: scale(1.1);
+}
+
+.welcome .box-container .box .content {
+  padding: 2rem;
+  padding-top: 2rem;
+}
+
+.welcome .box-container .box .content h3 {
+  color: var(--light-color);
+  font-size: 2rem;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.welcome .box-container .box .content p {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 0.5rem 0;
+  line-height: 1.8rem;
+  text-align: left;
+}
+/* --------------------------------------------------------------WELCOME style end ------------------------------------------------------------------------------------------------ */
+
+/* --------------------------------------------------------------otvaracie hodiny style start ------------------------------------------------------------------------------------------------ */
+
+.table-content {
+  border-collapse: collapse;
+  margin: 25px;
+  font-size: 1.5rem;
+  min-width: 400px;
+  text-align: center;
+  border-radius: 5px 5px 5px 5px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+
+.table-content th {
+  background-color: var(--black);
+  color: var(--light-color);
+  font-weight: bold;
+  padding: 12px 15px;
+}
+
+.table-content td:hover {
+  font-size: 1.8rem;
+  color: var(--light-color);
+}
+
+.table-content td {
+  border-bottom: 1px solid var(--light-color);
+}
+
+.table-content td:nth-of-type(odd) {
+  background-color: #f3f3f3;
+}
+/* --------------------------------------------------------------otvaracie hodiny style end ------------------------------------------------------------------------------------------------ */
+
+/* --------------------------------------------------------------Our team style starts  ------------------------------------------------------------------------------------------------ */
+
+/* .our-chef {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 1.5rem;
+}
+.our-chef .item .image img {
+  width: 50%;
+}
+.our-chef .item {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.our-chef .item:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+.our-chef .item:hover.item:before {
+  display: grid;
+}
+.our-chef .item .chef-info {
+  position: absolute;
+  top: 130%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  align-items: center;
+  transition: 1s;
+  cursor: pointer;
+}
+.our-chef .item .chef-info h3 {
+  font-size: 1.7rem;
+  color: #fff;
+  padding: 0.8rem 0;
+  text-transform: uppercase;
+}
+.our-chef .item .chef-info span {
+  font-size: 1.7rem;
+  color: var(--light-color);
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+.our-chef .item .chef-info ul {
+  list-style: none;
+  display: flex;
+  grid-gap: 2rem;
+  padding: 3rem 0;
+}
+.our-chef .item .chef-info ul li a {
+  color: #b9b6b6;
+  font-size: 1.8rem;
+}
+.our-chef .item:hover .chef-info {
+  top: 0;
+} */
+/* --------------------------------------------------------------Our team style ends  ------------------------------------------------------------------------------------------------ */
+/* --------------------------------------------------------------Reservation style starts  ------------------------------------------------------------------------------------------------ */
+.reservation {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.reservation .image {
+  width: 55%;
+  background: url(images/rezervation.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 9rem;
+}
+
+.reservation .form {
+  background: #181818;
+  width: 45%;
+  padding: 9rem;
+  padding-right: 9%;
+  padding-left: 2%;
+}
+
+.reservation .form h1 {
+  color: #fff;
+}
+
+.reservation .form-holder {
+  display: flex;
+  grid-gap: 3rem;
+  width: 100%;
+}
+
+.reservation .form form input,
+.reservation .form form select {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  background: none;
+  border-bottom: 0.1rem solid #b7b3b3;
+  color: #b7b3b3;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-transform: none;
+}
+
+.reservation .form form input:placeholder {
+  color: #b7b3b3;
+}
+
+.forum-sprava {
+  background-color: #b7b3b3;
+  text-transform: none;
+}
+
+.form-informacie {
+  color: var(--light-color);
+  font-size: 1.5rem;
+  text-transform: none;
+}
+
+/* --------------------------------------------------------------Reservation style ends  ------------------------------------------------------------------------------------------------ */
+/* --------------------------------------------------------------akcie style starts  ------------------------------------------------------------------------------------------------ */
+/* .news .box-container .box {
+  background-color: #fff;
+}
+
+.news .content {
+  text-align: left;
+  position: relative;
+}
+
+.news .content h3,
+.news .content p {
+  color: #333 !important;
+}
+
+.news .content a {
+  color: #181818;
+}
+
+.news .content img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+} */
+/* --------------------------------------------------------------akcie style ends  ------------------------------------------------------------------------------------------------ */
+
+/* --------------------------------------------------------------footer style starts  ------------------------------------------------------------------------------------------------ */
+
+.footer {
+  background: #333;
+  text-align: center;
+  color: #b2b2b2;
+  font-size: 1.3rem;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 2fr));
+  color: #b2b2b2;
+  grid-gap: 1rem;
+  padding: 4rem 0;
+  border-bottom: 1px solid #b2b2b2;
+}
+
+.footer .container div {
+  padding: 0 7rem;
+}
+
+.footer .container h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  padding-bottom: 0.8rem;
+}
+
+.footer .container input {
+  width: 100%;
+  border: 1px solid #b2b2b2;
+  padding: 0.5rem 0.8rem;
+  background: transparent;
+  border-radius: 20px;
+}
+
+.footer .container ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.footer .container ul li a {
+  color: #b2b2b2;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.footer .container span {
+  display: block;
+}
+
+.onas,
+.copyright {
+  text-transform: none;
+}
+
+.moznost-platby {
+  transform: scale(50%);
+}
+
+/* --------------------------------------------------------------footer style ends  ------------------------------------------------------------------------------------------------ */
+
+/*-------------------------------------------------------------------------------media query----------------------------------------------------------------------------------------*/
+
+@media (max-width: 1430px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    padding: 1rem 2rem;
+  }
+  header .logo img {
+    height: 7rem;
+  }
+
+  /* .denne-menu .menu-container {
+    grid-template-columns: repeat(autofit, minmax(30rem, 1fr));
+  } */
+
+  /* .denne-menu .menu-container .item .item-menu {
+    width: 100%;
+  } */
+}
+
+@media (max-width: 1110px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 1013px) {
+  /*-------------- navbar media query----------------------- */
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+
+  .header.active {
+    padding: 2rem;
+  }
+
+  header .logo img {
+    height: 7rem;
+  }
+  header .icons #menu {
+    display: inline-block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    text-align: center;
+    border-top: 0.1rem solid rgba(205, 170, 124, 0.2);
+    border-bottom: 0.1rem solid rgba(205, 170, 124, 0.2);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  header .navbar a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background: var(--black);
+  }
+  /* ----------------------------------------------title slider media query --------------------------------------- */
+  .home .home-slider .slide {
+    justify-content: center;
+    /* toto zoberie slider a da ho na 80% velkosti obrazovky takze slider v malom display 1013px nebude na celu obrazovku */
+    height: 80vh;
+  }
+
+  /* -------------------------------------------welcome section media quety --------------------------------------------*/
+  .welcome .box-container {
+    flex-wrap: wrap;
+  }
+
+  .welcome .box-container .box {
+    width: 100%;
+  }
+  /* -------------------------------------------reservation section media quety --------------------------------------------*/
+  .reservation .image {
+    width: 0;
+  }
+
+  .reservation .form {
+    width: 100%;
+  }
+
+  .reservation .form .form-holder {
+    display: block;
+  }
+
+  .vasa-sprava {
+    display: absolute;
+    padding: 0 20rem 0 0;
+  }
+}
+
+/* --------------------------------------------------------max width 550px--------------------------------------------- */
+@media (max-width: 550px) {
+  html {
+    font-size: 40%;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td .table th {
+    width: 100%;
+    table-layout: unset;
+    margin: 0;
+  }
+
+  .table tr {
+    margin-bottom: 15px;
+  }
+
+  .table td {
+    text-align: center;
+    padding-right: 20%;
+    text-align: center;
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-size: 2.5rem;
+  }
+}
+/* -----------------------------------------------------max width 346px ------------------------------------------------- */
+
+@media (max-width: 346px) {
+  html {
+    font-size: 35%;
+  }
+
+  .header .icons a {
+    letter-spacing: none;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  /* .table {
+    visibility: hidden;
+  } */
+}
+/* ----------------------------------------------------page on load animatoin --------------------------------------------- */
+
+/* @media (max-width: 470px) {
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    width: 100%;
+    padding-right: 30%;
+  }
+} */
+
+@keyframes nav-load {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
