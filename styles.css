@@ -591,6 +591,11 @@ section {
     height: 7rem;
   }
 
+  .aktualne-informacie .aktualne-informacie-content {
+    padding: 45px 16px 16px 16px;
+    width: 100rem;
+  }
+
   /* .denne-menu .menu-container {
     grid-template-columns: repeat(autofit, minmax(30rem, 1fr));
   } */
