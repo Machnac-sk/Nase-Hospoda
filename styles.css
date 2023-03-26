@@ -205,8 +205,8 @@ header .icons #menu {
 }
 
 .aktualne-informacie .aktualne-informacie-content {
-  padding: 45px 16px 16px 16px;
-  max-width: 500rem;
+  padding: 45px 16px 16px 460px;
+  width: 100rem;
 }
 
 .aktualne-informacie .aktualne-informacie-content .aktualne-informacie-text {

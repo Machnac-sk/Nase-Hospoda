@@ -56,9 +56,6 @@ h1::before {
   animation: animate 4s linear infinite;
 }
 
-
-
-
 .denne-menu .menu-container .item .item-name h2 {
   padding-top: 5rem;
   font-size: 3rem;
@@ -101,8 +98,16 @@ h1::before {
   width: 60%;
   float: right;
   /* border: rgba(0, 0, 0, 0.2); */
-  /* toto je bodkovana ciara ktora ide v menu od nazvu jedla k cene jedla */
-} */
+/* toto je bodkovana ciara ktora ide v menu od nazvu jedla k cene jedla */
+
+.denne_menu_ceny {
+  color: white;
+  text-align: center;
+  display: grid;
+  font-size: 1.4rem;
+  padding: 0.8rem 1rem;
+  font-weight: 400;
+}
 
 .denne-menu .menu-container .item .item-menu ul {
   /* display: flex; */
@@ -117,9 +122,6 @@ h1::before {
 }
 /* --------------------------------------------------------------denne menu style ends  ------------------------------------------------------------------------------------------------ */
 
-
-
-
 /* -------------------------keyframes for animation----------------------------------- */
 
 @keyframes animate {
@@ -132,10 +134,9 @@ h1::before {
   }
 
   100% {
-    width: 100px; 
+    width: 100px;
   }
 }
-
 
 @keyframes content-fade {
   from {
@@ -145,33 +146,27 @@ h1::before {
     opacity: 1;
   }
 
-    0% {
-    transform: scale(1.0);
+  0% {
+    transform: scale(1);
   }
   50% {
     transform: scale(1.2);
   }
-   100% {
-    transform: scale(1.0);
+  100% {
+    transform: scale(1);
   }
 }
-
-
 
 /* ---------------------------------------------------------------media query------------------------------------------------------------------ */
 
 @media (max-width: 1550px) {
+  .denne-menu .menu-container {
+    padding: 3rem 35rem;
+  }
 
-
-
-.denne-menu .menu-container { 
-  padding: 3rem 35rem;  
-}
-
-html {
-   font-size: 60%;
-}
-
+  html {
+    font-size: 60%;
+  }
 }
 
 @media (max-width: 1180px) {
@@ -197,7 +192,7 @@ html {
   }
   header .icons #menu {
     display: inline-block;
-  } 
+  }
 
   header .navbar {
     position: absolute;
@@ -223,8 +218,8 @@ html {
     background: var(--black);
   }
 
-  .denne-menu .menu-container { 
-  padding: 3rem 15rem;  
+  .denne-menu .menu-container {
+    padding: 3rem 15rem;
   }
 
   h1::before {
@@ -233,13 +228,12 @@ html {
 }
 /* --------------------------------------------------------max width 850px--------------------------------------------- */
 @media (max-width: 850px) {
-  .denne-menu .menu-container { 
-  padding: 3rem 5rem;  
+  .denne-menu .menu-container {
+    padding: 3rem 5rem;
   }
-
 }
 
-  /* --------------------------------------------------------max width 550px--------------------------------------------- */
+/* --------------------------------------------------------max width 550px--------------------------------------------- */
 @media (max-width: 550px) {
   html {
     font-size: 40%;
@@ -264,14 +258,13 @@ html {
     letter-spacing: none;
     font-size: 1rem;
     padding: 1rem;
-  } 
+  }
 
-    .heading {
+  .heading {
     padding-top: 15rem;
   }
 
   h1::before {
     top: 26rem;
   }
-
 }
