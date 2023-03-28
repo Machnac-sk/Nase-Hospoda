@@ -195,7 +195,9 @@ header .icons #menu {
 .aktualne-informacie {
   /* display: none; */
   display: flex;
-  margin: 0;
+  flex-direction: column;
+  margin-left: 20rem;
+  margin-right: 20rem;
   padding: 0;
   background-color: var(--light-color);
   text-align: center;
@@ -205,8 +207,9 @@ header .icons #menu {
 }
 
 .aktualne-informacie .aktualne-informacie-content {
-  padding: 45px 16px 16px 460px;
-  width: 100rem;
+  padding: 16px 16px 16px 16px;
+  width: auto;
+  align-items: center;
 }
 
 .aktualne-informacie .aktualne-informacie-content .aktualne-informacie-text {
@@ -225,7 +228,7 @@ header .icons #menu {
   color: #fff;
 }
 
-.ponuka-prace {
+/* .ponuka-prace {
   position: absolute;
   background: var(--light-color);
   margin-left: 70rem;
@@ -233,7 +236,7 @@ header .icons #menu {
 
 .ponuka-prace::before {
   background: var(--black);
-}
+} */
 
 /* --------------------------------------------------------------aktualne-informacie style end ------------------------------------------------------------------------------------------------ */
 
@@ -591,10 +594,10 @@ section {
     height: 7rem;
   }
 
-  .aktualne-informacie .aktualne-informacie-content {
+  /* .aktualne-informacie .aktualne-informacie-content {
     padding: 45px 16px 16px 16px;
     width: 100rem;
-  }
+  } */
 
   /* .denne-menu .menu-container {
     grid-template-columns: repeat(autofit, minmax(30rem, 1fr));
@@ -654,6 +657,12 @@ section {
     font-size: 2rem;
     background: var(--black);
   }
+  /* ----------------------------------------------aktualne informacie banner media query --------------------------------------- */
+  .aktualne-informacie {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
   /* ----------------------------------------------title slider media query --------------------------------------- */
   .home .home-slider .slide {
     justify-content: center;
