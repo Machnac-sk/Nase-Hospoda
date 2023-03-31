@@ -29,6 +29,7 @@ html {
   font-weight: 400;
   justify-content: center;
   line-height: 2;
+  animation: content-fade 4s;
 }
 
 .denne-menu .menu-container {
