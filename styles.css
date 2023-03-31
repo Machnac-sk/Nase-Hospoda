@@ -329,7 +329,7 @@ section {
   border-collapse: collapse;
   margin: 25px;
   font-size: 1.5rem;
-  min-width: 400px;
+  min-width: 300px;
   text-align: center;
   border-radius: 5px 5px 5px 5px;
   overflow: hidden;
@@ -350,11 +350,13 @@ section {
 
 .table-content td {
   border-bottom: 1px solid var(--light-color);
+  font-weight: 500;
 }
 
 .table-content td:nth-of-type(odd) {
   background-color: #f3f3f3;
 }
+
 /* --------------------------------------------------------------otvaracie hodiny style end ------------------------------------------------------------------------------------------------ */
 
 /* --------------------------------------------------------------Our team style starts  ------------------------------------------------------------------------------------------------ */
@@ -528,9 +530,9 @@ section {
 
 .footer .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 2fr));
   color: #b2b2b2;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   padding: 4rem 0;
   border-bottom: 1px solid #b2b2b2;
 }
@@ -665,9 +667,9 @@ section {
 
   /* ----------------------------------------------title slider media query --------------------------------------- */
   .home .home-slider .slide {
-    justify-content: center;
+    justify-content: left;
     /* toto zoberie slider a da ho na 80% velkosti obrazovky takze slider v malom display 1013px nebude na celu obrazovku */
-    height: 80vh;
+    height: 60vh;
   }
 
   /* -------------------------------------------welcome section media quety --------------------------------------------*/
@@ -702,34 +704,10 @@ section {
   html {
     font-size: 40%;
   }
-
-  .table,
-  .table tbody,
-  .table tr,
-  .table td .table th {
-    width: 100%;
-    table-layout: unset;
-    margin: 0;
-  }
-
-  .table tr {
-    margin-bottom: 15px;
-  }
-
-  .table td {
-    text-align: center;
-    padding-right: 20%;
-    text-align: center;
-    position: relative;
-    font-weight: 500;
-    font-size: 2.5rem;
-    font-weight: 500;
-    font-size: 2.5rem;
-  }
 }
 /* -----------------------------------------------------max width 346px ------------------------------------------------- */
 
-@media (max-width: 346px) {
+@media (max-width: 350px) {
   html {
     font-size: 35%;
   }
@@ -740,21 +718,17 @@ section {
     padding: 1rem;
   }
 
-  /* .table {
-    visibility: hidden;
-  } */
+  .table-content {
+    min-width: unset;
+    font-size: 1.2rem;
+  }
+
+  .table-content th,
+  .table-content td {
+    padding: 8px 10px;
+  }
 }
 /* ----------------------------------------------------page on load animatoin --------------------------------------------- */
-
-/* @media (max-width: 470px) {
-  .table,
-  .table tbody,
-  .table tr,
-  .table td {
-    width: 100%;
-    padding-right: 30%;
-  }
-} */
 
 @keyframes nav-load {
   0% {
