@@ -17,19 +17,7 @@ html {
 .denne-menu {
   background: url(images/our-menu-bg.jpg);
   background-position: top;
-  background-size: 180%;
-}
-
-.denne_menu_ceny {
-  color: white;
-  /* text-align: center; */
-  display: grid;
-  font-size: 1.4rem;
-  padding: 0.8rem 1rem;
-  font-weight: 400;
-  justify-content: center;
-  line-height: 2;
-  animation: content-fade 4s;
+  background-size: 100%;
 }
 
 .denne-menu .menu-container {
@@ -111,6 +99,15 @@ h1::before {
   float: right;
   /* border: rgba(0, 0, 0, 0.2); */
 /* toto je bodkovana ciara ktora ide v menu od nazvu jedla k cene jedla */
+
+.denne_menu_ceny {
+  color: white;
+  text-align: center;
+  display: grid;
+  font-size: 1.4rem;
+  padding: 0.8rem 1rem;
+  font-weight: 400;
+}
 
 .denne-menu .menu-container .item .item-menu ul {
   /* display: flex; */
