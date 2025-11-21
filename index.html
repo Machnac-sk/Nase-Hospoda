@@ -18,6 +18,20 @@
 
     <!-- --------------------------link for Bootstrap------------------------ -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+ <!-- --------------------------SnowFlakes Effect------------------------ -->
+    <style>
+  .snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    user-select: none;
+    pointer-events: none;
+    font-size: 1em;
+    z-index: 1000;
+    opacity: 0.8;
+    will-change: transform;
+  }
+</style>
   </head>
 
   <body>
@@ -707,5 +721,57 @@
 
     <!-- Custom link for file JS (Machnac.js)  -->
     <script src="machnac.js"></script>
+
+    <!-- --------------------------SnowFlakes Effect------------------------ -->
+    <script>
+  const numSnowflakes = 100;
+
+  function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.classList.add('snowflake');
+    snowflake.textContent = '❄';
+    snowflake.style.left = Math.random() * window.innerWidth + 'px';
+    snowflake.style.fontSize = 10 + Math.random() * 20 + 'px';
+    snowflake.style.opacity = Math.random();
+    snowflake.speed = 1 + Math.random() * 3;
+    snowflake.x = parseFloat(snowflake.style.left);
+    snowflake.y = -10;
+    snowflake.size = parseFloat(snowflake.style.fontSize);
+    snowflake.swayAmplitude = 0.5 + Math.random();
+    snowflake.swayFrequency = 0.005 + Math.random() * 0.01;
+    snowflake.swayPhase = Math.random() * 2 * Math.PI;
+    document.body.appendChild(snowflake);
+    return snowflake;
+  }
+
+  const snowflakes = [];
+  for (let i = 0; i < numSnowflakes; i++) {
+    snowflakes.push(createSnowflake());
+  }
+
+  function animateSnow() {
+    snowflakes.forEach(flake => {
+      flake.y += flake.speed;
+      flake.x += Math.sin(flake.y * flake.swayFrequency + flake.swayPhase) * flake.swayAmplitude;
+      if (flake.y > window.innerHeight) {
+        flake.y = -10;
+        flake.x = Math.random() * window.innerWidth;
+      }
+      flake.style.transform = `translate(${flake.x}px, ${flake.y}px)`;
+    });
+    requestAnimationFrame(animateSnow);
+  }
+
+  animateSnow();
+
+  window.addEventListener('resize', () => {
+    snowflakes.forEach(flake => {
+      flake.x = Math.random() * window.innerWidth;
+    });
+  });
+</script>
+
+    
   </body>
 </html>
+
