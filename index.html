@@ -741,9 +741,14 @@
     <!-- --------------------------SnowFlakes Effect------------------------ -->
    <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const snowflakeCount = 100;
+  const snowflakeCount = 100; // max number of snowflakes on screen
+  const interval = 150; // milliseconds between spawning new flakes
 
-  for (let i = 0; i < snowflakeCount; i++) {
+  let created = 0;
+
+  const spawnSnowflake = () => {
+    if (created >= snowflakeCount) return;
+
     const flake = document.createElement("div");
     flake.classList.add("snowflake");
     flake.innerHTML = "❄";
@@ -755,22 +760,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const size = Math.random() * 2.0 + 0.5;
     flake.style.fontSize = `${size * 1.3}em`;
 
-    // Random animation duration
+    // Random fall duration
     const duration = Math.random() * 8 + 4;
     flake.style.animationDuration = `${duration}s`;
     flake.style.animationName = "fall";
     flake.style.animationTimingFunction = "linear";
     flake.style.animationIterationCount = "infinite";
 
-    // Drift and rotation
+    // Random horizontal drift and rotation
     flake.style.setProperty("--drift", `${Math.random() * 40 - 20}px`);
     flake.style.setProperty("--rotation", `${Math.random() * 720 - 360}deg`);
 
-    // Start snowflake offscreen above the viewport
-    flake.style.transform = `translateY(-${Math.random() * 100 + 10}vh)`; 
+    // Start offscreen above the viewport
+    flake.style.transform = `translateY(-${Math.random() * 20 + 10}vh)`; 
 
     document.body.appendChild(flake);
-  }
+    created++;
+  };
+
+  // Spawn snowflakes gradually
+  const snowInterval = setInterval(() => {
+    spawnSnowflake();
+    if (created >= snowflakeCount) clearInterval(snowInterval);
+  }, interval);
 });
 
 </script>
@@ -779,6 +791,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
   </body>
 </html>
+
 
 
 
