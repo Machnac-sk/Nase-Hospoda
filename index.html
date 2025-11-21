@@ -20,17 +20,17 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
  <!-- --------------------------SnowFlakes Effect------------------------ -->
 <style>
-  .snowflake {
-    position: fixed;
-    top: -10px;
-    color: white;
-    user-select: none;
-    pointer-events: none;
-    font-size: 1em;
-    z-index: 1000;
-    opacity: 0.8;
-    will-change: transform;
-  }
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: white;
+  user-select: none;
+  pointer-events: none;
+  font-size: 1em;
+  z-index: 1000;
+  opacity: 0.8;
+  will-change: transform;
+}
 </style>
   </head>
 
@@ -731,12 +731,12 @@
     snowflake.classList.add('snowflake');
     snowflake.textContent = '❄';
     snowflake.style.fontSize = 10 + Math.random() * 20 + 'px';
-    snowflake.style.opacity = Math.random();
-    snowflake.speed = 1 + Math.random() * 3;
-    snowflake.baseX = Math.random() * window.innerWidth;  // fixed base horizontal position
-    snowflake.y = Math.random() * window.innerHeight;      // initial vertical position randomly along height
-    snowflake.swayAmplitude = 0.5 + Math.random();
-    snowflake.swayFrequency = 0.005 + Math.random() * 0.01;
+    snowflake.style.opacity = 0.6 + Math.random() * 0.4;
+    snowflake.baseX = Math.random() * window.innerWidth; // fixed horizontal position
+    snowflake.y = -Math.random() * window.innerHeight; // start above viewport at random height
+    snowflake.speed = 1 + Math.random() * 3; // vertical speed
+    snowflake.swayAmplitude = 10 + Math.random() * 10; // sway size in px
+    snowflake.swayFrequency = 0.01 + Math.random() * 0.02;
     snowflake.swayPhase = Math.random() * 2 * Math.PI;
     document.body.appendChild(snowflake);
     return snowflake;
@@ -749,20 +749,19 @@
 
   function animateSnow() {
     snowflakes.forEach(flake => {
-      flake.y += flake.speed;
+      flake.y += flake.speed; // move down steadily
 
-      // horizontal position as fixed base plus sway offset (no cumulative horizontal change)
+      // sway oscillation around base x
       const swayOffset = Math.sin(flake.y * flake.swayFrequency + flake.swayPhase) * flake.swayAmplitude;
       const x = flake.baseX + swayOffset;
 
       if (flake.y > window.innerHeight) {
-        flake.y = -10;
-        flake.baseX = Math.random() * window.innerWidth;  // new base position on reset
+        flake.y = -20; // restart just above viewport
+        flake.baseX = Math.random() * window.innerWidth; // new horizontal position
       }
 
       flake.style.transform = `translate(${x}px, ${flake.y}px)`;
     });
-
     requestAnimationFrame(animateSnow);
   }
 
@@ -774,10 +773,10 @@
     });
   });
 </script>
-
     
   </body>
 </html>
+
 
 
 
