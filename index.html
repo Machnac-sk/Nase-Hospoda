@@ -730,12 +730,11 @@
     const snowflake = document.createElement('div');
     snowflake.classList.add('snowflake');
     snowflake.textContent = '❄';
-    snowflake.style.left = Math.random() * window.innerWidth + 'px';
     snowflake.style.fontSize = 10 + Math.random() * 20 + 'px';
     snowflake.style.opacity = Math.random();
     snowflake.speed = 1 + Math.random() * 3;
-    snowflake.x = Math.random() * window.innerWidth; // base horizontal position
-    snowflake.y = -10;
+    snowflake.baseX = Math.random() * window.innerWidth;  // fixed base horizontal position
+    snowflake.y = Math.random() * window.innerHeight;      // initial vertical position randomly along height
     snowflake.swayAmplitude = 0.5 + Math.random();
     snowflake.swayFrequency = 0.005 + Math.random() * 0.01;
     snowflake.swayPhase = Math.random() * 2 * Math.PI;
@@ -752,16 +751,16 @@
     snowflakes.forEach(flake => {
       flake.y += flake.speed;
 
-      // Horizontal sway calculated as an offset around fixed base x position
+      // horizontal position as fixed base plus sway offset (no cumulative horizontal change)
       const swayOffset = Math.sin(flake.y * flake.swayFrequency + flake.swayPhase) * flake.swayAmplitude;
-      const newX = flake.x + swayOffset;
+      const x = flake.baseX + swayOffset;
 
       if (flake.y > window.innerHeight) {
         flake.y = -10;
-        flake.x = Math.random() * window.innerWidth; // reset base position on reuse
+        flake.baseX = Math.random() * window.innerWidth;  // new base position on reset
       }
 
-      flake.style.transform = `translate(${newX}px, ${flake.y}px)`;
+      flake.style.transform = `translate(${x}px, ${flake.y}px)`;
     });
 
     requestAnimationFrame(animateSnow);
@@ -771,7 +770,7 @@
 
   window.addEventListener('resize', () => {
     snowflakes.forEach(flake => {
-      flake.x = Math.random() * window.innerWidth;
+      flake.baseX = Math.random() * window.innerWidth;
     });
   });
 </script>
@@ -779,5 +778,6 @@
     
   </body>
 </html>
+
 
 
