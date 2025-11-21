@@ -741,9 +741,6 @@
     <!-- --------------------------SnowFlakes Effect------------------------ -->
    <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Remove any existing snowflakes
-  document.querySelectorAll(".snowflake").forEach(flake => flake.remove());
-
   const snowflakeCount = 100;
 
   for (let i = 0; i < snowflakeCount; i++) {
@@ -751,36 +748,24 @@ document.addEventListener("DOMContentLoaded", () => {
     flake.classList.add("snowflake");
     flake.innerHTML = "❄";
 
-    /* Evenly distribute horizontally */
-    flake.style.left = (i / snowflakeCount * 100) + "%";
+    flake.style.left = `${Math.random() * 100}%`;
+    flake.style.fontSize = `${Math.random() * 2 + 0.5}em`;
 
-    /* Random size */
-    const size = Math.random() * 2.0 + 0.5;
-    flake.style.fontSize = size * 1.3 + "em";
-
-    /* Fall duration */
+    // Remove delay, start immediately
     const duration = Math.random() * 8 + 4;
-    flake.style.animationDuration = duration + "s";
-
-    /* Random delay */
-    flake.style.animationDelay = (Math.random() * duration) + "s";
-
-    /* Drift left/right */
-    const drift = (Math.random() * 40 - 20) + "px";
-    flake.style.setProperty("--drift", drift);
-
-    /* Random rotation */
-    const rotateAngle = (Math.random() * 720 - 360) + "deg";
-    flake.style.setProperty("--rotation", rotateAngle);
-
-    /* Apply animation */
-    flake.style.animationName = "fall";
-    flake.style.animationTimingFunction = "linear";
+    flake.style.animationDuration = `${duration}s`;
     flake.style.animationIterationCount = "infinite";
+    flake.style.animationTimingFunction = "linear";
+    flake.style.animationName = "fall";
+
+    // Slight horizontal drift
+    flake.style.setProperty("--drift", `${Math.random() * 40 - 20}px`);
+    flake.style.setProperty("--rotation", `${Math.random() * 720 - 360}deg`);
 
     document.body.appendChild(flake);
   }
 });
+
 
 </script>
     <!-- --------------------------END OF SnowFlakes Effect------------------------ -->
@@ -788,6 +773,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
   </body>
 </html>
+
 
 
 
