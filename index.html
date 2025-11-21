@@ -755,21 +755,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const size = Math.random() * 2.0 + 0.5;
     flake.style.fontSize = `${size * 1.3}em`;
 
-    // Random fall duration
+    // Random animation duration
     const duration = Math.random() * 8 + 4;
     flake.style.animationDuration = `${duration}s`;
     flake.style.animationName = "fall";
     flake.style.animationTimingFunction = "linear";
     flake.style.animationIterationCount = "infinite";
 
-    // Random drift and rotation
+    // Drift and rotation
     flake.style.setProperty("--drift", `${Math.random() * 40 - 20}px`);
     flake.style.setProperty("--rotation", `${Math.random() * 720 - 360}deg`);
+
+    // Start snowflake offscreen above the viewport
+    flake.style.transform = `translateY(-${Math.random() * 100 + 10}vh)`; 
 
     document.body.appendChild(flake);
   }
 });
-
 
 </script>
     <!-- --------------------------END OF SnowFlakes Effect------------------------ -->
@@ -777,6 +779,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
   </body>
 </html>
+
 
 
 
