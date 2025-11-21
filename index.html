@@ -723,60 +723,52 @@
     <script src="machnac.js"></script>
 
     <!-- --------------------------SnowFlakes Effect------------------------ -->
-<script>
-  const numSnowflakes = 100;
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const snowflakeCount = 100;
 
-  function createSnowflake() {
-    const snowflake = document.createElement('div');
-    snowflake.classList.add('snowflake');
-    snowflake.textContent = '❄';
-    snowflake.style.fontSize = 10 + Math.random() * 20 + 'px';
-    snowflake.style.opacity = 0.6 + Math.random() * 0.4;
-    snowflake.baseX = Math.random() * window.innerWidth; // fixed horizontal position
-    snowflake.y = -Math.random() * window.innerHeight;   // start randomly above viewport
-    snowflake.speed = 1 + Math.random() * 3;             // falling speed
-    snowflake.swayAmplitude = 10 + Math.random() * 10;   // horizontal sway amplitude in px
-    snowflake.swayFrequency = 0.01 + Math.random() * 0.02;// sway frequency
-    snowflake.swayPhase = Math.random() * 2 * Math.PI;   // sway phase offset
+  for (let i = 0; i < snowflakeCount; i++) {
+    const snowflake = document.createElement("div");
+    snowflake.classList.add("snowflake");
+    snowflake.innerHTML = "❄";
+
+    // Horizontal position (even distribution)
+    snowflake.style.left = (i / snowflakeCount * 100) + "%";
+
+    // Random size
+    const size = Math.random() * 1.5 + 0.5; // 0.5em – 2em
+    snowflake.style.fontSize = size + "em";
+
+    // Random fall duration (speed)
+    const duration = Math.random() * 8 + 4; // 4–12 seconds
+
+    snowflake.style.animation = `fall ${duration}s linear infinite`;
+    snowflake.style.animationDelay = (Math.random() * duration) + "s";
+
     document.body.appendChild(snowflake);
-    return snowflake;
   }
-
-  const snowflakes = [];
-  for (let i = 0; i < numSnowflakes; i++) {
-    snowflakes.push(createSnowflake());
-  }
-
-  function animateSnow() {
-    snowflakes.forEach(flake => {
-      flake.y += flake.speed; // fall down
-
-      // horizontal sway around fixed baseX position
-      const swayOffset = Math.sin(flake.y * flake.swayFrequency + flake.swayPhase) * flake.swayAmplitude;
-      const x = flake.baseX + swayOffset;
-
-      if (flake.y > window.innerHeight) {
-        flake.y = -20;                      // reset to top
-        flake.baseX = Math.random() * window.innerWidth; // new random horizontal position
-      }
-
-      flake.style.transform = `translate(${x}px, ${flake.y}px)`;
-    });
-
-    requestAnimationFrame(animateSnow);
-  }
-
-  animateSnow();
-
-  window.addEventListener('resize', () => {
-    snowflakes.forEach(flake => {
-      flake.baseX = Math.random() * window.innerWidth;
-    });
-  });
+});
 </script>
+
+<style>
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(110vh);
+    opacity: 0.8;
+  }
+}
+</style>
+    <!-- --------------------------END OF SnowFlakes Effect------------------------ -->
+
     
   </body>
 </html>
+
 
 
 
