@@ -741,31 +741,35 @@
     <!-- --------------------------SnowFlakes Effect------------------------ -->
    <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const snowflakeCount = 100;
+  const snowflakeCount = 50; // number of snowflakes on screen
+  const snowflakes = [];
 
   for (let i = 0; i < snowflakeCount; i++) {
     const flake = document.createElement("div");
     flake.classList.add("snowflake");
     flake.innerHTML = "❄";
 
+    // Horizontal position
     flake.style.left = `${Math.random() * 100}%`;
+
+    // Random size
     flake.style.fontSize = `${Math.random() * 2 + 0.5}em`;
 
-    // Remove delay, start immediately
-    const duration = Math.random() * 8 + 4;
+    // Random fall duration
+    const duration = Math.random() * 5 + 5; // 5-10 seconds
     flake.style.animationDuration = `${duration}s`;
     flake.style.animationIterationCount = "infinite";
-    flake.style.animationTimingFunction = "linear";
     flake.style.animationName = "fall";
+    flake.style.animationTimingFunction = "linear";
 
-    // Slight horizontal drift
+    // Horizontal drift and rotation
     flake.style.setProperty("--drift", `${Math.random() * 40 - 20}px`);
     flake.style.setProperty("--rotation", `${Math.random() * 720 - 360}deg`);
 
     document.body.appendChild(flake);
+    snowflakes.push(flake);
   }
 });
-
 
 </script>
     <!-- --------------------------END OF SnowFlakes Effect------------------------ -->
@@ -773,6 +777,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
   </body>
 </html>
+
 
 
 
