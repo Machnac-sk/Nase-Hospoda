@@ -19,7 +19,7 @@
     <!-- --------------------------link for Bootstrap------------------------ -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
  <!-- --------------------------SnowFlakes Effect------------------------ -->
-    <style>
+<style>
   .snowflake {
     position: fixed;
     top: -10px;
@@ -723,7 +723,7 @@
     <script src="machnac.js"></script>
 
     <!-- --------------------------SnowFlakes Effect------------------------ -->
-    <script>
+<script>
   const numSnowflakes = 100;
 
   function createSnowflake() {
@@ -734,9 +734,8 @@
     snowflake.style.fontSize = 10 + Math.random() * 20 + 'px';
     snowflake.style.opacity = Math.random();
     snowflake.speed = 1 + Math.random() * 3;
-    snowflake.x = parseFloat(snowflake.style.left);
+    snowflake.x = Math.random() * window.innerWidth; // base horizontal position
     snowflake.y = -10;
-    snowflake.size = parseFloat(snowflake.style.fontSize);
     snowflake.swayAmplitude = 0.5 + Math.random();
     snowflake.swayFrequency = 0.005 + Math.random() * 0.01;
     snowflake.swayPhase = Math.random() * 2 * Math.PI;
@@ -752,13 +751,19 @@
   function animateSnow() {
     snowflakes.forEach(flake => {
       flake.y += flake.speed;
-      flake.x += Math.sin(flake.y * flake.swayFrequency + flake.swayPhase) * flake.swayAmplitude;
+
+      // Horizontal sway calculated as an offset around fixed base x position
+      const swayOffset = Math.sin(flake.y * flake.swayFrequency + flake.swayPhase) * flake.swayAmplitude;
+      const newX = flake.x + swayOffset;
+
       if (flake.y > window.innerHeight) {
         flake.y = -10;
-        flake.x = Math.random() * window.innerWidth;
+        flake.x = Math.random() * window.innerWidth; // reset base position on reuse
       }
-      flake.style.transform = `translate(${flake.x}px, ${flake.y}px)`;
+
+      flake.style.transform = `translate(${newX}px, ${flake.y}px)`;
     });
+
     requestAnimationFrame(animateSnow);
   }
 
@@ -774,4 +779,5 @@
     
   </body>
 </html>
+
 
