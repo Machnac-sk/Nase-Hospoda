@@ -120,6 +120,15 @@ h1::before {
 .denne-menu .menu-container .item .item-menu ul li a {
   color: #b9b9b9;
 }
+/* css pre p element pre alergeny v napojovom listku */
+p.allergens {
+  color: #b9b9b9;
+  padding-top: 1%;
+  font-size: 1.1rem !important;
+  
+}
+
+
 /* --------------------------------------------------------------denne menu style ends - napojovy listok  ------------------------------------------------------------------------------------------------ */
 
 /* -----------------------------------------------------------keyframes for animation---------------------------------------------------------- */
