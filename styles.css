@@ -275,7 +275,8 @@ section {
 }
 
 .welcome .box-container .box {
-  width: 33%;
+  /* width: 33%; */
+  width: 50%;
   background-color: var(--black);
   box-shadow: var(--box-shadow);
   text-align: center;
