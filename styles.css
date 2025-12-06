@@ -285,7 +285,7 @@ section {
 }
 
 .welcome .box-container .box .image {
-  height: 25rem;
+  height: auto;
   width: 100%;
   overflow: hidden;
   position: relative;
