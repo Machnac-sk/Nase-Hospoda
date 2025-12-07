@@ -1,110 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Denne Menu</title>
+<title>Denne Menu</title> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image.png" href="images/machnac-logo/tab-logo.png" />
+    
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image.png" href="images/machnac-logo/tab-logo.png" />
+    <!-- ------------link for font awesome------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 
+    <!-- -------styles.css link------- -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="denne menu.css" />
 
-  <!-- ------------link for font awesome------------- -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!--------------------------------- bootstrap link ---------------------------------------------->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"></script>
 
-  <!-- -------styles.css link------- -->
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="denne menu.css" />
+  </head>
+  <body>
+    <!-- ----------------------------------------------header section starts-------------------------------- -->
+    <header>
+      <a href="index.html" class="logo"><img src="images/machnac-logo/logo-machnac-biele.png" /></a>
 
-  <!--------------------------------- bootstrap link ---------------------------------------------->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
+      <nav class="navbar">
+        <a href="index.html">Domov</a>
+        <!-- <a href="denne menu.html" class="active">Denne Menu</a> -->
+        <a href="denneMenu.html">Denné menu</a>
+        <a href="jedalnyListok.html">Jedálny lístok</a>
+        <a href="napojovyListok.html">Nápojový lístok</a>
+        <a href="index.html#reservation" class="active">Rezervácie</a>
+        <a href="fotogaleria.html">Fotogaléria</a>
+        <a href="#footer">Kontakt</a>
+      </nav>
 
-</head>
+      <div class="icons">
+        <i class="fas fa-bars" id="menu"></i>
+        <a href="https://www.facebook.com/nasehospoda"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/nasehospodamachnac/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+        <!-- <i class="fas fa-shopping-cart"></i> -->
+        <!-- <a href="index.html#reservation" class="btn" id="btn">Rezervácie</a> -->
+      </div>
+    </header>
 
-<body>
-  <!-- ----------------------------------------------header section starts-------------------------------- -->
-  <header>
-    <a href="index.html" class="logo"><img src="images/machnac-logo/logo-machnac-biele.png" /></a>
+    <!-- ------------------------------------------------------------------------menu section start---------------------------------------------------------------- -->
 
-    <nav class="navbar">
-      <a href="index.html">Domov</a>
-      <!-- <a href="denne menu.html" class="active">Denne Menu</a> -->
-      <a href="denneMenu.html">Denné menu</a>
-      <a href="jedalnyListok.html">Jedálny lístok</a>
-      <a href="napojovyListok.html">Nápojový lístok</a>
-      <a href="index.html#reservation" class="active">Rezervácie</a>
-      <a href="fotogaleria.html">Fotogaléria</a>
-      <a href="#footer">Kontakt</a>
-    </nav>
+    <section class="denne-menu"> <!--odstranila som --- id=menu --- lebo sa id to nehodilo-->
+      <h1 class="heading">Denné menu</h1>
+      <center><h3 class="sub-heading"> Naša týżdenná ponuka</h3></center>
 
-    <div class="icons">
-      <i class="fas fa-bars" id="menu"></i>
-      <a href="https://www.facebook.com/nasehospoda"><i class="fa-brands fa-facebook"></i></a>
-      <a href="https://www.instagram.com/nasehospodamachnac/?hl=en"><i class="fa-brands fa-instagram"></i></a>
-      <!-- <i class="fas fa-shopping-cart"></i> -->
-      <!-- <a href="index.html#reservation" class="btn" id="btn">Rezervácie</a> -->
-    </div>
-  </header>
+      <div class="denne_menu_ceny">
+        <h4>
+          8  € hlavné jedlo, polievka a nápoj
+        </h4>
+        <h4>
+          7,50 € hlavné jedlo bez polievky a nápoj
+        </h4>
+        <h4>
+          2,50 € menu polievka
+        </h4>
+        
+      </div>
 
-  <!-- ------------------------------------------------------------------------menu section start---------------------------------------------------------------- -->
+      
+      <div class="menu-container">
+        <div class="item">
 
-  <section class="denne-menu"> <!--odstranila som --- id=menu --- lebo sa id to nehodilo-->
-    <h1 class="heading">Denné menu</h1>
-    <center>
-      <h3 class="sub-heading"> Naša týżdenná ponuka</h3>
-    </center>
+<!-- -------------------------------------------------------------------Pondelok----------------------------------------------------------- -->
+           <div class="item-name">
+            <h2>Pondelok 8.12.</h2>
+            <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" />
+          </div> --> -->
+          
+     
 
-    <div class="denne_menu_ceny">
-      <h4>
-        8 € hlavné jedlo, polievka a nápoj
-      </h4>
-      <h4>
-        7,50 € hlavné jedlo bez polievky a nápoj
-      </h4>
-      <h4>
-        2,50 € menu polievka
-      </h4>
-
-    </div>
-
-
-    <div class="menu-container">
-      <div class="item">
-
-        <!-- -------------------------------------------------------------------Pondelok----------------------------------------------------------- -->
-        <div class="item-name">
-          <h2>Pondelok 1.12.</h2>
-          <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" />
-        </div> --> -->
-
-
-
-
-        <div class="item-body">
-          <div class="item-menu">
-            <h4>(0,25 l) Zeleninový krém s krutónmi 1,3,7,9,12
-
-
-
-
-
-
-            </h4>
-            <span class="dots"></span>
-            <!-- <h3>€14.50</h3> -->
-            <!-- <p>mrkva, kelerba, petrzlen, cesnak, cibula, korenie</p> -->
-
-            <ul>
-              <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-            </ul>
-          </div>
 
           <div class="item-body">
             <div class="item-menu">
-              <h4>(120 g) Kuracie prsia v parmezánovej kruste, vínovo maslová omáčka, baby brokolica, zemiaková kaša
-                1,3,7,9,12</h4>
+              <h4>(0,25 l)	Frankfurtská s párkom 1,7,9
+              
+
+  
+
+      
+                
+                </h4>
+              <span class="dots"></span>
+              <!-- <h3>€14.50</h3> -->
+              <!-- <p>mrkva, kelerba, petrzlen, cesnak, cibula, korenie</p> -->
+
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>
+
+             <div class="item-body">
+            <div class="item-menu">
+              <h4>(120 g)	Stroganov z bravčovej panenky, ryža 1,3,7,9,10,12</h4>
               <span class="dots"></span>
               <!-- <h3>€4.50</h3> -->
               <!-- <p>syn, hranolky, smazena klobasa</p> -->
@@ -114,36 +110,36 @@
               </ul>
             </div> --> -->
 
-            <div class="item-body">
-              <div class="item-menu">
-                <h4>(300 g) Zapekané penne so syrovou omáčkou, pórom a šampiňónmi 1,3,7</h4>
-                <h4></h4>
-                <h4></h4>
-                <h4></h4>
-                <span class="dots"></span>
-                <!-- <h3>€10.50</h3> -->
-                <p></p>
+             <div class="item-body">
+            <div class="item-menu">
+              <h4>(300 g)	Bryndzové halušky so slaninkou 1,3,7</h4>
+              <h4></h4>
+              <h4></h4>
+              <h4></h4>
+              <span class="dots"></span>
+              <!-- <h3>€10.50</h3> -->
+              <p></p>
 
-                <ul>
-                  <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                </ul>
-              </div> -->
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>    -->
 
-              <div class="item-body">
-                <div class="item-menu">
-                  <h4< /h4>
-                    <span class="dots"></span>
-                    <!-- <h3>€10.50</h3> -->
-                    <!-- <p>halusky, tvaroh, syn,</p> -->
+             <div class="item-body">
+            <div class="item-menu">
+              <h4</h4>
+              <span class="dots"></span>
+              <!-- <h3>€10.50</h3> -->
+              <!-- <p>halusky, tvaroh, syn,</p> -->
 
-                    <ul>
-                      <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                    </ul>
-                </div>
-              </div>
-            </div>
-            <!-- Pondelok 15.9. -->
-            <!-- <div class="item-day">
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>            
+          </div>
+        </div> 
+<!-- Pondelok 15.9. -->
+<!-- <div class="item-day">
   <div class="item-name">
     <h2>Pondelok 15.9.</h2>
     <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" alt="Hlavné jedlá" />
@@ -170,68 +166,68 @@
 
 
 
-            <!-- --------------------------------------------------------------Utorok----------------------------------------------------------- -->
-            <div class="item-name">
-              <h2>Utorok 2.12.</h2>
-              <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" />
+<!-- --------------------------------------------------------------Utorok----------------------------------------------------------- -->
+          <div class="item-name">
+            <h2>Utorok 9.12.</h2>
+            <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" />
+          </div>
+
+          <div class="item-body">
+            <div class="item-menu">
+              <h4>(0,25 l)	Karfiolová so zemiakmi 1,7,9</h4>
+              <span class="dots"></span>
+              <!-- <h3>€14.50</h3> -->
+              <!-- <p>mrkva, kelerba, petrzlen, cesnak, cibula, korenie</p> -->
+
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
             </div>
 
-            <div class="item-body">
-              <div class="item-menu">
-                <h4>(0,25 l) Hlivová polievka 1,3,7,9</h4>
-                <span class="dots"></span>
-                <!-- <h3>€14.50</h3> -->
-                <!-- <p>mrkva, kelerba, petrzlen, cesnak, cibula, korenie</p> -->
+             <div class="item-body">
+            <div class="item-menu">
+              <h4>(120 g)	Bravčový gordon bleu, zemiaková kaša, šalát 1,3,7</h4>
+              <span class="dots"></span>
+              <!-- <h3>€4.50</h3> -->
+              <!-- <p>syn, hranolky, smazena klobasa</p> -->
 
-                <ul>
-                  <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                </ul>
-              </div>
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>
 
-              <div class="item-body">
-                <div class="item-menu">
-                  <h4>(300 g) Tagliatelle s paradajkou omáčkou, mäsové guličky, parmezán, rukola 1,3,7,9,12</h4>
-                  <span class="dots"></span>
-                  <!-- <h3>€4.50</h3> -->
-                  <!-- <p>syn, hranolky, smazena klobasa</p> -->
+             <div class="item-body">
+            <div class="item-menu">
+              <h4>(300 g)	Šošovicový prívarok s grilovanými mini párkami  alebo vajíčkom 1,3,7,9</h4>
+              <span class="dots"></span>
+              <!-- <h3>€4.50</h3> -->
+              <!-- <p>mrkva, kelerba, cesnak, cibula, </p> -->
 
-                  <ul>
-                    <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                  </ul>
-                </div>
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>
 
-                <div class="item-body">
-                  <div class="item-menu">
-                    <h4>(300 g) Pražená ryža s tofu a zeleninou 1,2,3,4,6,7,9,11,14</h4>
-                    <span class="dots"></span>
-                    <!-- <h3>€4.50</h3> -->
-                    <!-- <p>mrkva, kelerba, cesnak, cibula, </p> -->
+             <div class="item-body">
+            <div class="item-menu">
+              <h4>
+          
+              </h4>
+              <span class="dots"></span>
+              <!-- <h3>€10.50</h3> -->
+              <!-- <p>halusky, tvaroh, syn,</p> -->
 
-                    <ul>
-                      <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                    </ul>
-                  </div>
-
-                  <div class="item-body">
-                    <div class="item-menu">
-                      <h4>
-
-                      </h4>
-                      <span class="dots"></span>
-                      <!-- <h3>€10.50</h3> -->
-                      <!-- <p>halusky, tvaroh, syn,</p> -->
-
-                      <ul>
-                        <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>            
+          </div>
+        </div>
 
 
-                <!-- Pondelok 16.9. -->
-                <div class="item-day">
-                  <!-- <div class="item-name">
+<!-- Pondelok 16.9. -->
+<div class="item-day">
+  <!-- <div class="item-name">
     <h2>Utorok 16.9.</h2>
     <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" alt="Hlavné jedlá" />
   </div>
@@ -256,66 +252,66 @@
 </div> -->
 
 
-                  <!-- --------------------------------------------------------------Streda----------------------------------------------------------- -->
-                  <div class="item-name">
-                    <h2>Streda 3.12.</h2>
-                    <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" />
-                  </div>
+<!-- --------------------------------------------------------------Streda----------------------------------------------------------- -->
+         <div class="item-name">
+            <h2>Streda 10.12.</h2>
+            <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" />
+          </div>
 
-                  <div class="item-body">
-                    <div class="item-menu">
-                      <h4>(0,25 l) Hovädzí vývar so zeleninou a rezancami 1,3,7,9 </h4>
-                      <span class="dots"></span>
-                      <!-- <h3>€14.50</h3> -->
-                      <!-- <p>mrkva, kelerba, petrzlen, cesnak, cibula, korenie</p> -->
+          <div class="item-body">
+            <div class="item-menu">
+              <h4>(0,25 l)	Slepačí  vývar so zeleninou a celestínskymi rezancami 1,3,7,9 </h4>
+              <span class="dots"></span>
+              <!-- <h3>€14.50</h3> -->
+              <!-- <p>mrkva, kelerba, petrzlen, cesnak, cibula, korenie</p> -->
 
-                      <ul>
-                        <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                      </ul>
-                    </div>
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>
 
-                    <div class="item-body">
-                      <div class="item-menu">
-                        <h4>(120 g) Hovädzí guláš na čiernom pive, knedľa 1,3,7</h4>
-                        <span class="dots"></span>
-                        <!-- <h3>€4.50</h3> -->
-                        <!-- <p>syn, hranolky, smazena klobasa</p> -->
+             <div class="item-body">
+            <div class="item-menu">
+              <h4>(120 g)	Bravčový segedínsky  guláš, knedľa 1,3,7,9</h4>
+              <span class="dots"></span>
+              <!-- <h3>€4.50</h3> -->
+              <!-- <p>syn, hranolky, smazena klobasa</p> -->
 
-                        <ul>
-                          <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                        </ul>
-                      </div>
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>
 
-                      <div class="item-body">
-                        <div class="item-menu">
-                          <h4>
-                            (300 g) Špenát, varené zemiaky, varené vajíčko 1,3,7,9,12
-                          </h4>
-                          <span class="dots"></span>
-                          <!-- <h3>€4.50</h3> -->
-                          <!-- <p>mrkva, kelerba, cesnak, cibula, </p> -->
+             <div class="item-body">
+            <div class="item-menu">
+              <h4>
+                (300 g)	Hubovo parmezánové rizoto 1,3,7,9,12
+                </h4>
+              <span class="dots"></span>
+              <!-- <h3>€4.50</h3> -->
+              <!-- <p>mrkva, kelerba, cesnak, cibula, </p> -->
 
-                          <ul>
-                            <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                          </ul>
-                        </div>
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>
 
-                        <div class="item-body">
-                          <div class="item-menu">
-                            <h4></h4>
-                            <span class="dots"></span>
-                            <!-- <h3>€10.50</h3> -->
-                            <!-- <p>halusky, tvaroh, syn,</p> -->
+             <div class="item-body">
+            <div class="item-menu">
+              <h4></h4>
+              <span class="dots"></span>
+              <!-- <h3>€10.50</h3> -->
+              <!-- <p>halusky, tvaroh, syn,</p> -->
 
-                            <ul>
-                              <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>            
+          </div>
+        </div>
 
-                      <!-- Pondelok 2.6. -->
-                      <!-- <div class="item-day">
+<!-- Pondelok 2.6. -->
+<!-- <div class="item-day">
   <div class="item-name">
     <h2>Streda 17.9.</h2>
     <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" alt="Hlavné jedlá" />
@@ -341,67 +337,66 @@
 </div> -->
 
 
-                      <!-- --------------------------------------------------------------Stvrtok----------------------------------------------------------- -->
+<!-- --------------------------------------------------------------Stvrtok----------------------------------------------------------- -->
 
-                      <div class="item-name">
-                        <h2>Štvrtok 4.12.</h2>
-                        <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" />
-                      </div>
+         <div class="item-name">
+            <h2>Štvrtok 11.12.</h2>
+            <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" />
+          </div>
 
-                      <div class="item-body">
-                        <div class="item-menu">
-                          <h4>(0,25 l) Pórová polievka 1,3,7,9</h4>
-                          <span class="dots"></span>
-                          <!-- <h3>€14.50</h3> -->
-                          <!-- <p>mrkva, kelerba, petrzlen, cesnak, cibula, korenie</p> -->
+          <div class="item-body">
+            <div class="item-menu">
+              <h4>(0,25 l)	Zelerový krém s krutónmi 1,7,9</h4>
+              <span class="dots"></span>
+              <!-- <h3>€14.50</h3> -->
+              <!-- <p>mrkva, kelerba, petrzlen, cesnak, cibula, korenie</p> -->
 
-                          <ul>
-                            <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                          </ul>
-                        </div>
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>
 
-                        <div class="item-body">
-                          <div class="item-menu">
-                            <h4>(300 g) Lasagne bolognese, bazalkové pesto 1,3,7,9,12 </h4>
-                            <span class="dots"></span>
-                            <!-- <h3>€4.50</h3> -->
-                            <!-- <p>syn, hranolky, smazena klobasa</p> -->
+             <div class="item-body">
+            <div class="item-menu">
+              <h4>(120 g)	Hovädzie ragu na koreňovej zelenine a červenom víne, slovenská ryža 1,3,7,9,12 </h4>
+              <span class="dots"></span>
+              <!-- <h3>€4.50</h3> -->
+              <!-- <p>syn, hranolky, smazena klobasa</p> -->
 
-                            <ul>
-                              <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                            </ul>
-                          </div>
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>
 
-                          <div class="item-body">
-                            <div class="item-menu">
-                              <h4>(300 g) Wrap s feta syrom ( šalát, paradajka, červená cibuľa, olivy, oregano ) medovo-
-                                horčicový dresing, ½ hranolky 1,3,7,10
+             <div class="item-body">
+            <div class="item-menu">
+              <h4>(120 g)	Vyprážaný hermelín, varené zemiaky, t.o. 1,3,7,10
+          
+            </h4>
+              <span class="dots"></span>
+              <!-- <h3>€4.50</h3> -->
+              <!-- <p>mrkva, kelerba, cesnak, cibula, </p> -->
+              
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>
 
-                              </h4>
-                              <span class="dots"></span>
-                              <!-- <h3>€4.50</h3> -->
-                              <!-- <p>mrkva, kelerba, cesnak, cibula, </p> -->
+             <div class="item-body">
+            <div class="item-menu">
+              <h4></h4>
+              <span class="dots"></span>
+              <!-- <h3>€10.50</h3> -->
+              <!-- <p>halusky, tvaroh, syn,</p> -->
 
-                              <ul>
-                                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                              </ul>
-                            </div>
-
-                            <div class="item-body">
-                              <div class="item-menu">
-                                <h4></h4>
-                                <span class="dots"></span>
-                                <!-- <h3>€10.50</h3> -->
-                                <!-- <p>halusky, tvaroh, syn,</p> -->
-
-                                <ul>
-                                  <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Pondelok 2.6. -->
-                          <!-- <div class="item-day">
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>            
+          </div>
+        </div>
+<!-- Pondelok 2.6. -->
+<!-- <div class="item-day">
  <div class="item-name">
     <h2>Štvrtok 18.9.</h2>
     <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" alt="Hlavné jedlá" />
@@ -420,49 +415,47 @@
       <h4>(300 g)	Bryndzové halušky so slaninkou 1,3,7</h4>
     </div> -->
 
-                          <ul>
+    <ul>
+      
+    </ul>
+  </div>
+</div> -->
 
-                          </ul>
-                        </div>
-                      </div> -->
+<!-- --------------------------------------------------------------Piatok----------------------------------------------------------- -->
+      <div class="item-name">
+            <h2>Piatok 12.12.</h2>
+            <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" />
+          </div> 
+          <div class="item-body">
+            <div class="item-menu">
+              </h4></h4>
+              <span class="dots"></span>
+              <!-- <h3>€14.50</h3> -->
+              <!-- <p>mrkva, kelerba, petrzlen, cesnak, cibula, korenie</p> -->
 
-                      <!-- --------------------------------------------------------------Piatok----------------------------------------------------------- -->
-                      <div class="item-name">
-                        <h2>Piatok 5.12.</h2>
-                        <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" />
-                      </div>
-                      <div class="item-body">
-                        <div class="item-menu">
-                          </h4>
-                          </h4>
-                          <span class="dots"></span>
-                          <!-- <h3>€14.50</h3> -->
-                          <!-- <p>mrkva, kelerba, petrzlen, cesnak, cibula, korenie</p> -->
-
-                          <ul>
-                            <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                          </ul>
-                        </div>
-
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>
 
 
+  
 
-                        <div class="item-body">
-                          <div class="item-menu">
-                            <h4> (0,25 l) Šošovicová so zeleninou 1,3,7,9</h4>
-                            <span class="dots"></span>
-                            <!-- <h3>€4.50</h3> -->
-                            <!-- <p>syn, hranolky, smazena klobasa</p> -->
+          <div class="item-body">
+            <div class="item-menu">
+              <h4> (0,25 l)	Fazuľová na kyslo 1,7,9</h4>
+              <span class="dots"></span>
+              <!-- <h3>€4.50</h3> -->
+              <!-- <p>syn, hranolky, smazena klobasa</p> -->
 
-                            <ul>
-                              <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                            </ul>
-                          </div>
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>
 
-                          <div class="item-body">
-                            <div class="item-menu">
-                              <h4>(120 g) Vyprážaný bravčový rezeň, slovenský šalát 1,3,7,10
-
+          <div class="item-body">
+            <div class="item-menu">
+              <h4>(120 g)	Caesar wrap, ½ hranolky, t.o. 1,3,4,7,8,10
 
 
 
@@ -472,39 +465,40 @@
 
 
 
-                              </h4>
-                              <span class="dots"></span>
-                              <!-- <h3>€4.50</h3> -->
-                              <!-- <p>mrkva, kelerba, cesnak, cibula, </p> -->
 
-                              <ul>
-                                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                              </ul>
-                            </div>
+              </h4>
+              <span class="dots"></span>
+              <!-- <h3>€4.50</h3> -->
+              <!-- <p>mrkva, kelerba, cesnak, cibula, </p> -->
 
-                            <div class="item-body">
-                              <div class="item-menu">
-                                <h4>(300 g) Zemiakové knedle plnené nugátom s opečenou strúhankou 1,3,7,8
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>
 
-
-
+          <div class="item-body">
+            <div class="item-menu">
+              <h4>(120 g)	Vyprážané rybie file, majonézový šalát 1,3,4,7,9,10,
 
 
 
 
-                                </h4>
-                                <span class="dots"></span>
-                                <!-- <h3>€10.50</h3> -->
-                                <!-- <p>halusky, tvaroh, syn,</p> -->
 
-                                <ul>
-                                  <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Pondelok 2.6. -->
-                          <!-- <div class="item-day">
+
+
+              </h4>
+              <span class="dots"></span>
+              <!-- <h3>€10.50</h3> -->
+              <!-- <p>halusky, tvaroh, syn,</p> -->
+
+              <ul>
+                <li><a href="https://www.sibax.sk/dokumenty/zoznam_alergenov.pdf"></a></li>
+              </ul>
+            </div>            
+          </div>
+        </div>
+        <!-- Pondelok 2.6. -->
+<!-- <div class="item-day">
    <div class="item-name">
     <h2>Piatok 19.9.</h2>
     <img src="images/logo-jedla-a-napoje/hlavne_jedla.png" alt="Hlavné jedlá" />
@@ -523,65 +517,61 @@
       <h4>(300 g)Zapekané penne s hubovou omáčkou a syrom 1,3,7,9,12</h4>
     </div> -->
 
-                          <ul>
-
-                          </ul>
-                        </div>
-                      </div>
-                      </section>
-
+    <ul>
+      
+    </ul>
+  </div>
+</div> -->
 
 
+      
 
 
-                      <!-- ------------------------------------------------------------------------menu section end------------------------------------------------------------------->
+    <!-- ------------------------------------------------------------------------menu section end------------------------------------------------------------------->
 
-                      <!-- ---------------------------------------------------------footer section starts here  -------------------------------------------------------------------------- -->
-                      <section class="footer" id="footer">
-                        <div class="container">
-                          <div>
-                            <img src="images/machnac-logo/logo-machnac-biele.png" />
-                            <br />
-                            <br />
-                            <br />
-                            <h3>Sociálne siete</h3>
-                            <ul>
-                              <li>
-                                <a href="https://www.facebook.com/nasehospoda"><i class="fa-brands fa-facebook"></i></a>
-                              </li>
-                              <li>
-                                <a href="https://www.instagram.com/nasehospodamachnac/?hl=en"><i
-                                    class="fa-brands fa-instagram"></i></a>
-                              </li>
-                            </ul>
-                          </div>
+    <!-- ---------------------------------------------------------footer section starts here  -------------------------------------------------------------------------- -->
+    <section class="footer" id="footer">
+      <div class="container">
+        <div>
+          <img src="images/machnac-logo/logo-machnac-biele.png" />
+          <br />
+          <br />
+          <br />
+          <h3>Sociálne siete</h3>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/nasehospoda"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/nasehospodamachnac/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
 
-                          <div>
-                            <h3>Možnosti platby</h3>
-                            <img class="moznost-platby" src="images/platby_kartami.png" alt="" />
-                            <img class="moznost-platby" src="images/platby_stravne_lístaky..png" alt="" />
-                          </div>
+        <div>
+          <h3>Možnosti platby</h3>
+          <img class="moznost-platby" src="images/platby_kartami.png" alt="" />
+          <img class="moznost-platby" src="images/platby_stravne_lístaky..png" alt="" />
+        </div>
 
-                          <div>
-                            <h3>Kontaktujte nás</h3>
-                            <h4><i class="fa-solid fa-phone"></i> 0911 412 253</h4>
-                            <br />
-                            <h4><i class="fa-solid fa-phone"></i> 02/ 5443 0895</h4>
-                            <br />
-                            <h4><i class="fa-regular fa-envelope"></i> machnac42@gmail.com</h4>
-                            <br />
-                            <h4><i class="fa-solid fa-location-dot"></i> Nábr.arm.gen.Ludvíka Svobodu 42, 811 02,
-                              Bratislava</h4>
-                          </div>
-                        </div>
-                        <p class="copyright">created by Kayla Mindžáková | all rights reserved</p>
-                        <p class="copyright">with help of Ján Šalák | graphic design</p>
-                      </section>
+        <div>
+          <h3>Kontaktujte nás</h3>
+          <h4><i class="fa-solid fa-phone"></i> 0911 412 253</h4>
+          <br />
+          <h4><i class="fa-solid fa-phone"></i> 02/ 5443 0895</h4>
+          <br />
+          <h4><i class="fa-regular fa-envelope"></i> machnac42@gmail.com</h4>
+          <br />
+          <h4><i class="fa-solid fa-location-dot"></i> Nábr.arm.gen.Ludvíka Svobodu 42, 811 02, Bratislava</h4>
+        </div>
+      </div>
+      <p class="copyright">created by Kayla Mindžáková | all rights reserved</p>
+      <p class="copyright">with help of Ján Šalák | graphic design</p>
+    </section>
 
-                      <!-- ---------------------------------------------------------footer section ends here  -------------------------------------------------------------------------- -->
-
-                      <!-- Custom link for file JS (Machnac.js)  -->
-                      <script src="machnac.js"></script>
-</body>
-
+    <!-- ---------------------------------------------------------footer section ends here  -------------------------------------------------------------------------- -->
+  
+    <!-- Custom link for file JS (Machnac.js)  -->
+  <script src="machnac.js"></script>
+  </body>
 </html>
