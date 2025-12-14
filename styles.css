@@ -491,6 +491,12 @@ section {
   color: var(--light-color);
   font-size: 1.5rem;
   text-transform: none;
+  font-weight: 700;
+}
+
+/* Make all form labels bold */
+form label {
+  font-weight: 700;
 }
 
 /* --------------------------------------------------------------Reservation style ends  ------------------------------------------------------------------------------------------------ */
