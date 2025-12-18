@@ -141,8 +141,8 @@ header .icons #menu {
   background-image: url(images/bannery/bannery_web-5.jpg);
 }
 
-.home .home-slider .slider11 {
-  background-image: url(images/bannery/bannery_web-11.jpg);
+.home .home-slider .slider12 {
+  background-image: url(images/bannery/bannery_web-12.jpg);
 }
 
 /* this section is for the background style images with cover style and without any repeats for the images being used */
@@ -150,7 +150,8 @@ header .icons #menu {
 .home .home-slider .slider2,
 .home .home-slider .slider3,
 .home .home-slider .slider4,
-.home .home-slider .slider5 {
+.home .home-slider .slider5,
+.home .home-slider .slider12{
   background-size: cover;
   background-repeat: no-repeat;
 }
