@@ -141,6 +141,10 @@ header .icons #menu {
   background-image: url(images/bannery/bannery_web-5.jpg);
 }
 
+.home .home-slider .slider11 {
+  background-image: url(images/bannery/bannery_web-11.jpg);
+}
+
 /* this section is for the background style images with cover style and without any repeats for the images being used */
 .home .home-slider .slider1,
 .home .home-slider .slider2,
