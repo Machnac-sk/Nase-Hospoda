@@ -591,6 +591,12 @@
 
   <script>
     $(document).ready(function () {
+
+        // Initially show only Jedlo images and activate Jedlo button
+  $(".buttons[data-filter='Jedlo']").addClass("active").siblings().removeClass("active");
+  $(".image").not(".Jedlo").hide(0);  // Hide all other categories instantly
+  $(".Jedlo").show(400);  // Show Jedlo with smooth animation
+
       $(".buttons").click(function () {
         $(this).addClass("active").siblings().removeClass("active");
 
