@@ -1,234 +1,623 @@
 <!DOCTYPE html>
 <html lang="en">
 <title>Fotogaleria</title>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image.png" href="images/machnac-logo/tab-logo.png" />
-    
-    <!-- ------------link for font awesome------------- -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 
-    <!-- -------styles.css link------- -->
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="fotogaleria.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image.png" href="images/machnac-logo/tab-logo.png" />
 
-    <!--------------------------------- magnific-popup css CDN link ---------------------------------------------->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    <!-- ----------------------------------------------header section starts-------------------------------- -->
-    <header>
-      <a href="index.html" class="logo"><img src="images/machnac-logo/logo-machnac-biele.png" /></a>
+  <!-- ------------link for font awesome------------- -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 
-      <nav class="navbar">
-        <a href="index.html">Domov</a>
-        <!-- <a href="denne menu.html" class="active">Denne Menu</a> -->
-        <a href="denneMenu.html">Denné menu</a>
-        <a href="jedalnyListok.html">Jedálny lístok</a>
-        <a href="napojovyListok.html">Nápojový lístok</a>
-        <a href="index.html#reservation" class="active">Rezervácie</a>
-        <a href="fotogaleria.html">Fotogaléria</a>
-        <!-- <a href="#team">O nás</a> -->
-        <a href="#footer">Kontakt</a>
-      </nav>
+  <!-- -------styles.css link------- -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="fotogaleria.css" />
 
-      <div class="icons">
-        <i class="fas fa-bars" id="menu"></i>
-        <a href="https://www.facebook.com/nasehospoda"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.instagram.com/nasehospodamachnac/?hl=en"><i class="fa-brands fa-instagram"></i></a>
-        <!-- <i class="fas fa-shopping-cart"></i> -->
-        <!-- <a href="index.html#reservation" class="btn" id="btn">Rezervácie</a> -->
-      </div>
-    </header>
+  <!--------------------------------- magnific-popup css CDN link ---------------------------------------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-    <!-- ------------------------------------------------------------------------fotogaleria section start---------------------------------------------------------------- -->
+<body>
+  <!-- ----------------------------------------------header section starts-------------------------------- -->
+  <header>
+    <a href="index.html" class="logo"><img src="images/machnac-logo/logo-machnac-biele.png" /></a>
 
-      <h1 class="heading">MACHNÁČ FOTOGALÉRIA</h1>
-      <center><h3 class="sub-heading">Viac fotografií nájdete na Facebooku a Instagrame</h3></center>
-      <div class="gallery">
-        <ul class="controls">
-          <li class="buttons active" data-filter="all">Všetky fotky</li>
-          <li class="buttons" data-filter="Oslavy">Oslavy</li>
-          <li class="buttons" data-filter="Svadby">Svadby</li>
-          <li class="buttons" data-filter="Viančné_Večierky">Vianočné večierky</li>
-          <!-- <li class="buttons" data-filter="all">all</li> -->
-          <!-- <li class="buttons" data-filter="all">all</li> -->
-        </ul>
-        <!-- --------------------------------------------------------------fotky pre Oslavy-------------------------------------------------------------------- -->
-        <div class="image-container">
-          <a href="images/oslavy/20190629_114025.jpg" class="image Oslavy">
-            <img src="images/oslavy/20190629_114025.jpg" />
-          </a>
+    <nav class="navbar">
+      <a href="index.html">Domov</a>
+      <!-- <a href="denne menu.html" class="active">Denne Menu</a> -->
+      <a href="denneMenu.html">Denné menu</a>
+      <a href="jedalnyListok.html">Jedálny lístok</a>
+      <a href="napojovyListok.html">Nápojový lístok</a>
+      <a href="index.html#reservation" class="active">Rezervácie</a>
+      <a href="fotogaleria.html">Fotogaléria</a>
+      <!-- <a href="#team">O nás</a> -->
+      <a href="#footer">Kontakt</a>
+    </nav>
 
-          <a href="images/oslavy/20190629_114025.jpg" class="image Oslavy">
-            <img src="images/oslavy/20190629_114048.jpg" />
-          </a>
+    <div class="icons">
+      <i class="fas fa-bars" id="menu"></i>
+      <a href="https://www.facebook.com/nasehospoda"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com/nasehospodamachnac/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+      <!-- <i class="fas fa-shopping-cart"></i> -->
+      <!-- <a href="index.html#reservation" class="btn" id="btn">Rezervácie</a> -->
+    </div>
+  </header>
 
-          <a href="images/oslavy/20190629_114025.jpg" class="image Oslavy">
-            <img src="images/oslavy/20190629_114056.jpg" />
-          </a>
+  <!-- ------------------------------------------------------------------------fotogaleria section start---------------------------------------------------------------- -->
 
-          <a href="images/oslavy/20190629_114106.jpg" class="image Oslavy">
-            <img src="images/oslavy/20190629_114106.jpg" />
-          </a>
+  <h1 class="heading">MACHNÁČ FOTOGALÉRIA</h1>
+  <center>
+    <h3 class="sub-heading">Viac fotografií nájdete na Facebooku a Instagrame</h3>
+  </center>
+  <div class="gallery">
+    <ul class="controls">
+      <!-- <li class="buttons active" data-filter="all">Všetky fotky</li> -->
+      <li class="buttons" data-filter="Jedlo">Jedlo</li>
+      <li class="buttons" data-filter="Oslavy">Oslavy</li>
+      <li class="buttons" data-filter="Svadby">Svadby</li>
+      <li class="buttons" data-filter="Viančné_Večierky">Vianočné večierky</li>
+      <!-- <li class="buttons" data-filter="all">all</li> -->
+      <!-- <li class="buttons" data-filter="all">all</li> -->
+    </ul>
 
-          <a href="images/oslavy/20190629_114122.jpg" class="image Oslavy">
-            <img src="images/oslavy/20190629_114122.jpg" />
-          </a>
+    <div class="image-container">
 
-          <a href="images/oslavy/20190629_114133.jpg" class="image Oslavy">
-            <img src="images/oslavy/20190629_114133.jpg" />
-          </a>
+      <!-- --------------------------------------------------------------fotky pre Jedlo-------------------------------------------------------------------- -->
 
-          <a href="images/oslavy/20190629_114138.jpg" class="image Oslavy">
-            <img src="images/oslavy/20190629_114138.jpg" />
-          </a>
-          <!-- --------------------------------------------------------------fotky pre Oslavy-------------------------------------------------------------------- -->
+      <a href="images/jedlo/1.jpg" class="image Jedlo">
+        <img src="images/jedlo/1.jpg" />
+      </a>
 
-          <!-- --------------------------------------------------------------fotky pre Svadby-------------------------------------------------------------------- -->
-          <a href="images/svadby/20190504_135856.jpg" class="image Svadby">
-            <img src="images/svadby/20190504_135856.jpg" />
-          </a>
+      <a href="images/jedlo/2.jpg" class="image Jedlo">
+        <img src="images/jedlo/2.jpg" />
+      </a>
+      <a href="images/jedlo/3.jpg" class="image Jedlo">
+        <img src="images/jedlo/3.jpg" />
+      </a>
+      <a href="images/jedlo/4.jpg" class="image Jedlo">
+        <img src="images/jedlo/4.jpg" />
+      </a>
+      <a href="images/jedlo/5.jpg" class="image Jedlo">
+        <img src="images/jedlo/5.jpg" />
+      </a>
+      <a href="images/jedlo/6.jpg" class="image Jedlo">
+        <img src="images/jedlo/6.jpg" />
+      </a>
+      <a href="images/jedlo/7.jpg" class="image Jedlo">
+        <img src="images/jedlo/7.jpg" />
+      </a>
+      <a href="images/jedlo/8.jpg" class="image Jedlo">
+        <img src="images/jedlo/8.jpg" />
+      </a>
+      <a href="images/jedlo/9.jpg" class="image Jedlo">
+        <img src="images/jedlo/9.jpg" />
+      </a>
+      <a href="images/jedlo/10.jpg" class="image Jedlo">
+        <img src="images/jedlo/10.jpg" />
+      </a>
+      <a href="images/jedlo/11.jpg" class="image Jedlo">
+        <img src="images/jedlo/11.jpg" />
+      </a>
+      <a href="images/jedlo/12.jpg" class="image Jedlo">
+        <img src="images/jedlo/12.jpg" />
+      </a>
+      <a href="images/jedlo/13.jpg" class="image Jedlo">
+        <img src="images/jedlo/13.jpg" />
+      </a>
+      <a href="images/jedlo/14.jpg" class="image Jedlo">
+        <img src="images/jedlo/14.jpg" />
+      </a>
 
-          <a href="images/svadby/20190504_135902.jpg" class="image Svadby">
-            <img src="images/svadby/20190504_135838.jpg" />
-          </a>
+      <!-- --------------------------------------------------------------fotky Jedlo-------------------------------------------------------------------- -->
 
-          <a href="images/svadby/20190504_135902.jpg" class="image Svadby">
-            <img src="images/svadby/20190504_135902.jpg" />
-          </a>
 
-          <a href="images/svadby/20190504_135916.jpg" class="image Svadby">
-            <img src="images/svadby/20190504_135916.jpg" />
-          </a>
+      <!-- --------------------------------------------------------------fotky pre Oslavy-------------------------------------------------------------------- -->
 
-          <a href="images/svadby/20190504_143501.jpg" class="image Svadby">
-            <img src="images/svadby/20190504_143501.jpg" />
-          </a>
+      <a href="images/oslavy/oslavy1.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy1.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy2.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy2.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy3.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy3.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy4.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy4.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy5.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy5.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy6.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy6.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy7.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy7.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy8.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy8.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy9.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy9.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy10.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy10.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy11.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy11.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy12.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy12.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy13.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy13.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy14.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy14.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy15.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy15.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy16.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy16.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy17.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy17.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy18.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy18.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy19.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy19.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy20.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy20.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy21.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy21.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy22.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy22.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy23.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy23.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy24.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy24.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy25.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy25.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy26.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy26.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy27.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy27.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy28.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy28.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy29.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy29.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy30.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy30.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy31.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy31.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy32.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy32.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy33.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy33.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy34.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy34.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy35.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy35.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy36.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy36.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy37.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy37.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy38.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy38.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy39.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy39.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy40.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy40.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy41.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy41.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy42.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy42.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy43.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy43.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy44.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy44.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy45.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy45.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy46.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy46.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy47.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy47.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy48.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy48.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy49.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy49.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy50.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy50.jpg" />
+      </a>
+      <a href="images/oslavy/oslavy51.jpg" class="image Oslavy">
+        <img src="images/oslavy/oslavy51.jpg" />
+      </a>
 
-          <a href="images/svadby/20190504_143516.jpg" class="image Svadby">
-            <img src="images/svadby/20190504_143516.jpg" />
-          </a>
+      <!-- --------------------------------------------------------------fotky pre Oslavy-------------------------------------------------------------------- -->
 
-          <a href="images/svadby/20190504_143559.jpg" class="image Svadby">
-            <img src="images/svadby/20190504_143559.jpg" />
-          </a>
-          <!-- --------------------------------------------------------------fotky pre Svadby-------------------------------------------------------------------- -->
+      <!-- --------------------------------------------------------------fotky pre Svadby-------------------------------------------------------------------- -->
+      <a href="images/svadby/svadby1.jpg" class="image Svadby">
+        <img src="images/svadby/svadby1.jpg" />
+      </a>
+      <a href="images/svadby/svadby2.jpg" class="image Svadby">
+        <img src="images/svadby/svadby2.jpg" />
+      </a>
+      <a href="images/svadby/svadby3.jpg" class="image Svadby">
+        <img src="images/svadby/svadby3.jpg" />
+      </a>
+      <a href="images/svadby/svadby4.jpg" class="image Svadby">
+        <img src="images/svadby/svadby4.jpg" />
+      </a>
+      <a href="images/svadby/svadby5.jpg" class="image Svadby">
+        <img src="images/svadby/svadby5.jpg" />
+      </a>
+      <a href="images/svadby/svadby6.jpg" class="image Svadby">
+        <img src="images/svadby/svadby6.jpg" />
+      </a>
+      <a href="images/svadby/svadby7.jpg" class="image Svadby">
+        <img src="images/svadby/svadby7.jpg" />
+      </a>
+      <a href="images/svadby/svadby8.jpg" class="image Svadby">
+        <img src="images/svadby/svadby8.jpg" />
+      </a>
+      <a href="images/svadby/svadby9.jpg" class="image Svadby">
+        <img src="images/svadby/svadby9.jpg" />
+      </a>
+      <a href="images/svadby/svadby10.jpg" class="image Svadby">
+        <img src="images/svadby/svadby10.jpg" />
+      </a>
+      <a href="images/svadby/svadby11.jpg" class="image Svadby">
+        <img src="images/svadby/svadby11.jpg" />
+      </a>
+      <a href="images/svadby/svadby12.jpg" class="image Svadby">
+        <img src="images/svadby/svadby12.jpg" />
+      </a>
+      <a href="images/svadby/svadby13.jpg" class="image Svadby">
+        <img src="images/svadby/svadby13.jpg" />
+      </a>
+      <a href="images/svadby/svadby14.jpg" class="image Svadby">
+        <img src="images/svadby/svadby14.jpg" />
+      </a>
+      <a href="images/svadby/svadby15.jpg" class="image Svadby">
+        <img src="images/svadby/svadby15.jpg" />
+      </a>
+      <a href="images/svadby/svadby16.jpg" class="image Svadby">
+        <img src="images/svadby/svadby16.jpg" />
+      </a>
+      <a href="images/svadby/svadby17.jpg" class="image Svadby">
+        <img src="images/svadby/svadby17.jpg" />
+      </a>
+      <a href="images/svadby/svadby18.jpg" class="image Svadby">
+        <img src="images/svadby/svadby18.jpg" />
+      </a>
+      <a href="images/svadby/svadby19.jpg" class="image Svadby">
+        <img src="images/svadby/svadby19.jpg" />
+      </a>
+      <a href="images/svadby/svadby20.jpg" class="image Svadby">
+        <img src="images/svadby/svadby20.jpg" />
+      </a>
+      <a href="images/svadby/svadby21.jpg" class="image Svadby">
+        <img src="images/svadby/svadby21.jpg" />
+      </a>
+      <a href="images/svadby/svadby22.jpg" class="image Svadby">
+        <img src="images/svadby/svadby22.jpg" />
+      </a>
+      <a href="images/svadby/svadby23.jpg" class="image Svadby">
+        <img src="images/svadby/svadby23.jpg" />
+      </a>
+      <a href="images/svadby/svadby24.jpg" class="image Svadby">
+        <img src="images/svadby/svadby24.jpg" />
+      </a>
+      <a href="images/svadby/svadby25.jpg" class="image Svadby">
+        <img src="images/svadby/svadby25.jpg" />
+      </a>
+      <a href="images/svadby/svadby26.jpg" class="image Svadby">
+        <img src="images/svadby/svadby26.jpg" />
+      </a>
+      <a href="images/svadby/svadby27.jpg" class="image Svadby">
+        <img src="images/svadby/svadby27.jpg" />
+      </a>
+      <a href="images/svadby/svadby28.jpg" class="image Svadby">
+        <img src="images/svadby/svadby28.jpg" />
+      </a>
+      <a href="images/svadby/svadby29.jpg" class="image Svadby">
+        <img src="images/svadby/svadby29.jpg" />
+      </a>
+      <a href="images/svadby/svadby30.jpg" class="image Svadby">
+        <img src="images/svadby/svadby30.jpg" />
+      </a>
+      <a href="images/svadby/svadby31.jpg" class="image Svadby">
+        <img src="images/svadby/svadby31.jpg" />
+      </a>
+      <a href="images/svadby/svadby32.jpg" class="image Svadby">
+        <img src="images/svadby/svadby32.jpg" />
+      </a>
+      <a href="images/svadby/svadby33.jpg" class="image Svadby">
+        <img src="images/svadby/svadby33.jpg" />
+      </a>
+      <a href="images/svadby/svadby34.jpg" class="image Svadby">
+        <img src="images/svadby/svadby34.jpg" />
+      </a>
+      <a href="images/svadby/svadby35.jpg" class="image Svadby">
+        <img src="images/svadby/svadby35.jpg" />
+      </a>
+      <a href="images/svadby/svadby36.jpg" class="image Svadby">
+        <img src="images/svadby/svadby36.jpg" />
+      </a>
+      <a href="images/svadby/svadby37.jpg" class="image Svadby">
+        <img src="images/svadby/svadby37.jpg" />
+      </a>
+      <a href="images/svadby/svadby38.jpg" class="image Svadby">
+        <img src="images/svadby/svadby38.jpg" />
+      </a>
+      <a href="images/svadby/svadby39.jpg" class="image Svadby">
+        <img src="images/svadby/svadby39.jpg" />
+      </a>
+      <a href="images/svadby/svadby40.jpg" class="image Svadby">
+        <img src="images/svadby/svadby40.jpg" />
+      </a>
+      <a href="images/svadby/svadby41.jpg" class="image Svadby">
+        <img src="images/svadby/svadby41.jpg" />
+      </a>
+      <a href="images/svadby/svadby42.jpg" class="image Svadby">
+        <img src="images/svadby/svadby42.jpg" />
+      </a>
+      <a href="images/svadby/svadby43.jpg" class="image Svadby">
+        <img src="images/svadby/svadby43.jpg" />
+      </a>
+      <a href="images/svadby/svadby44.jpg" class="image Svadby">
+        <img src="images/svadby/svadby44.jpg" />
+      </a>
+      <a href="images/svadby/svadby45.jpg" class="image Svadby">
+        <img src="images/svadby/svadby45.jpg" />
+      </a>
 
-          <!-- --------------------------------------------------------------fotky pre Vianocne Vecierky-------------------------------------------------------------------- -->
-          <a href="images/vianocny_vecierok/20221212_163100.jpg" class="image Viančné_Večierky">
-            <img src="images/vianocny_vecierok/20221212_163100.jpg" />
-          </a>
+      <!-- --------------------------------------------------------------fotky pre Svadby-------------------------------------------------------------------- -->
 
-          <a href="images/vianocny_vecierok/20221212_163105.jpg" class="image Viančné_Večierky">
-            <img src="images/vianocny_vecierok/20221212_163105.jpg" />
-          </a>
+      <!-- --------------------------------------------------------------fotky pre Vianocne Vecierky-------------------------------------------------------------------- -->
 
-          <a href="images/vianocny_vecierok/20221212_163105.jpg" class="image Viančné_Večierky">
-            <img src="images/vianocny_vecierok/20221212_163113.jpg" />
-          </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky1.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky1.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky2.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky2.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky3.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky3.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky4.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky4.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky5.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky5.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky6.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky6.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky7.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky7.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky8.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky8.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky9.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky9.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky10.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky10.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky11.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky11.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky12.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky12.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky13.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky13.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky14.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky14.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky15.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky15.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky16.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky16.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky17.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky17.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky18.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky18.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky19.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky19.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky20.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky20.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky21.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky21.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky22.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky22.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky23.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky23.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky24.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky24.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky25.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky25.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky26.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky26.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky27.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky27.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky28.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky28.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky29.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky29.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky30.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky30.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky31.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky31.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky32.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky32.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky33.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky33.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky34.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky34.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky35.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky35.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky36.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky36.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky37.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky37.jpg" />
+      </a>
+      <a href="images/vianocny_vecierok/vianocne-vecierky38.jpg" class="image Viančné_Večierky">
+        <img src="images/vianocny_vecierok/vianocne-vecierky38.jpg" />
+      </a>
 
-          <a href="images/vianocny_vecierok/20221212_163124.jpg" class="image Viančné_Večierky">
-            <img src="images/vianocny_vecierok/20221212_163124.jpg" />
-          </a>
 
-          <a href="images/vianocny_vecierok/20221212_163137.jpg" class="image Viančné_Večierky">
-            <img src="images/vianocny_vecierok/20221212_163137.jpg" />
-          </a>
+      <!-- --------------------------------------------------------------fotky pre Vianocne Vecierky-------------------------------------------------------------------- -->
+    </div>
+  </div>
+  <!-- </section> -->
 
-          <a href="images/vianocny_vecierok/20221212_163152.jpg" class="image Viančné_Večierky">
-            <img src="images/vianocny_vecierok/20221212_163152.jpg" />
-          </a>
-
-          <a href="images/vianocny_vecierok/20221212_163200.jpg" class="image Viančné_Večierky">
-            <img src="images/vianocny_vecierok/20221212_163200.jpg" />
-          </a>
-        </div>
-        <!-- --------------------------------------------------------------fotky pre Vianocne Vecierky-------------------------------------------------------------------- -->
-      </div>
-    </section>
-
-    <!-- ------------------------------------------------------------------------fotogaleria section end------------------------------------------------------------------->
+  <!-- ------------------------------------------------------------------------fotogaleria section end------------------------------------------------------------------->
 
   <!-- ---------------------------------------------------------footer section starts here  -------------------------------------------------------------------------- -->
- <section class="footer" id="footer">
-		<div class="container">
-			<div>
-				<h3>Kontaktujte nás</h3>
-				<h4><i class="fa-solid fa-phone"></i> 0911 412 253</h4>
-				<br />
-				<h4><i class="fa-regular fa-envelope"></i> machnac42@gmail.com</h4>
-				<br />
-				<h4><i class="fa-solid fa-location-dot"></i> Nábr.arm.gen.Ludvíka Svobodu 42, 811 02, Bratislava</h4>
-			</div>
+  <section class="footer" id="footer">
+    <div class="container">
+      <div>
+        <h3>Kontaktujte nás</h3>
+        <h4><i class="fa-solid fa-phone"></i> 0911 412 253</h4>
+        <br />
+        <h4><i class="fa-regular fa-envelope"></i> machnac42@gmail.com</h4>
+        <br />
+        <h4><i class="fa-solid fa-location-dot"></i> Nábr.arm.gen.Ludvíka Svobodu 42, 811 02, Bratislava</h4>
+      </div>
 
-			<div>
-				<img src="images/machnac-logo/logo-machnac-biele.png" />
-				<br />
-				<br />
-				<br />
-				<h3>Sociálne siete</h3>
-				<ul>
-					<li>
-						<a href="https://www.facebook.com/nasehospoda"><i class="fa-brands fa-facebook"></i></a>
-					</li>
-					<li>
-						<a href="https://www.instagram.com/nasehospodamachnac/?hl=en"><i
-								class="fa-brands fa-instagram"></i></a>
-					</li>
-				</ul>
-			</div>
+      <div>
+        <img src="images/machnac-logo/logo-machnac-biele.png" />
+        <br />
+        <br />
+        <br />
+        <h3>Sociálne siete</h3>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/nasehospoda"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/nasehospodamachnac/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
 
-			<div>
-				<h3>Možnosti platby</h3>
-				<img class="moznost-platby" src="images/platby_kartami.png" alt="" />
-				<img class="moznost-platby" src="images/platby_stravne_lístaky..png" alt="" />
-			</div>
+      <div>
+        <h3>Možnosti platby</h3>
+        <img class="moznost-platby" src="images/platby_kartami.png" alt="" />
+        <img class="moznost-platby" src="images/platby_stravne_lístaky..png" alt="" />
+      </div>
 
 
-		</div>
-		<p class="copyright">created by Kayla Mindžáková | all rights reserved</p>
-		<p class="copyright">with help of Ján Šalák | graphic design</p>
-	</section>
+    </div>
+    <p class="copyright">created by Kayla Mindžáková | all rights reserved</p>
+    <p class="copyright">with help of Ján Šalák | graphic design</p>
+  </section>
 
-    <!-- ---------------------------------------------------------footer section ends here  -------------------------------------------------------------------------- -->
+  <!-- ---------------------------------------------------------footer section ends here  -------------------------------------------------------------------------- -->
 
-    <!-- --------------------------------------------------jquery CDN link------------------------------------------------- -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- --------------------------------------------------jquery CDN link------------------------------------------------- -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- -------------------------------------------magnific popup for JS CDN link ---------------------------------- -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- -------------------------------------------magnific popup for JS CDN link ---------------------------------- -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+    integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-      $(document).ready(function () {
-        $(".buttons").click(function () {
-          $(this).addClass("active").siblings().removeClass("active");
+  <script>
+    $(document).ready(function () {
+      $(".buttons").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
 
-          var filter = $(this).attr("data-filter");
+        var filter = $(this).attr("data-filter");
 
-          if (filter == "all") {
-            $(".image").show(400);
-          } else {
-            $(".image")
-              .not("." + filter)
-              .hide(200);
-            $(".image")
-              .filter("." + filter)
-              .show(400);
-          }
+        if (filter == "all") {
+          $(".image").show(400);
+        } else {
+          $(".image")
+            .not("." + filter)
+            .hide(200);
+          $(".image")
+            .filter("." + filter)
+            .show(400);
+        }
 
-          $(".gallery").magnificPopup({
-            delegate: "a",
-            type: "image",
-            gallery: {
-              enabled: true,
-            },
-          });
+        $(".gallery").magnificPopup({
+          delegate: "a",
+          type: "image",
+          gallery: {
+            enabled: true,
+          },
         });
       });
-    </script>
-    <script src="Fotogaleria.js"></script>
-  </body>
+    });
+  </script>
+  <script src="Fotogaleria.js"></script>
+</body>
+
 </html>
